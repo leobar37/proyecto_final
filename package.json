@@ -1,0 +1,26 @@
+{
+  "name": "trabajo_final",
+  "version": "1.0.0",
+  "description": "__Integrantes__  - Montero lopez Roberto Carlos - Peréz Montenegro Axel - Torrez Curay Jhonatan - Leon Barboza ELmer Joselo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch sass/main.scss:dist/css/main.css",
+    "dev": "npm run sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leobar37/proyecto_final.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leobar37/proyecto_final/issues"
+  },
+  "homepage": "https://github.com/leobar37/proyecto_final#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "bootstrap": "^4.5.0"
+  }
+}

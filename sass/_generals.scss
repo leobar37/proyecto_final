@@ -1,0 +1,27 @@
+img{
+    display: block;
+
+}
+@mixin btn($style) {
+    padding: 0.8rem 1rem;
+    border: none;
+    text-transform: uppercase;
+    outline: none;  
+    cursor: pointer;
+    @if ($style == border) {
+        border-radius: 15px;
+    }
+    @else {
+        @if($style == rectangle){
+           border: 2px solid  $color-white;
+           background: transparent;
+        }
+     }
+}
+
+
+.btn{
+    @include  btn(rectangle);
+    // background: blue;
+ color: $color-white;
+}

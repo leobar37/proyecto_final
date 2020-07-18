@@ -1,0 +1,47 @@
+$space_items : 15px;
+%menu{
+    ul{
+        list-style: none;
+            a{
+               text-decoration: none;
+               color: white;
+               margin: 0 $space_items;
+               font-size: map-get($map: $fonts-size, $key: menu);
+               text-transform: uppercase;
+               border-bottom: 2px solid transparent;
+               &:hover{
+                @include  hover_state_menu;
+               }
+            }
+    }   
+}
+header{
+    background-color:  lighten($color: $color-secondary, $amount: 4);
+    height: 98vh;
+    position: relative;
+  /*=============================================
+  =            menu            =
+  =============================================*/
+    .menu{
+     @extend %menu;
+    }
+
+  
+
+}
+.svg__header{
+    width: calc(100% - 370px);
+    position: absolute;
+     top: 2rem;
+     right: -3rem;
+}
+.row__down{
+    position: fixed;
+    top: calc(99vh - 20%);
+    left: calc(95%/2);
+     a i{
+         color: $color-white;
+          font-size: 4rem;
+       }
+    
+}

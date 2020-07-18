@@ -1,0 +1,9 @@
+@import "settings";
+@import "header";
+@import "generals";
+
+body{
+    background:  $color-white;
+    font-size: 18px;
+    font-family: $font-sans;
+}

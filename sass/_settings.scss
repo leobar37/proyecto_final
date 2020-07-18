@@ -1,0 +1,21 @@
+$color-secondary : #424242;
+$color-white : #FFFFFF;
+$color-primary : #85AEFF;
+
+$font-lato: 'Lato', sans-serif;
+$font-sans: 'Open Sans', sans-serif;
+$font-roboto: 'Roboto', sans-serif;
+
+$fonts-size : ( 
+    "logo" : 28px,
+    "paragraph" : 16px,
+    "menu" :  20px 
+);
+
+@mixin hover_state_menu {
+    border-bottom: 2px solid white;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
