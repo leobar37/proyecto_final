@@ -5,6 +5,7 @@ __Integrantes__
 - Peréz Montenegro Axel
 - Torrez Curay Jhonatan
 - Leon Barboza ELmer Joselo
+- Gonzalez Agip Omar Alexander
 
 ### texto plano 
 ---
