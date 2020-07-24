@@ -1,0 +1,35 @@
+
+@include media-md{
+    .menu{
+       visibility: hidden ;
+       ul a{
+         transition: transform 0.5s ease-in-out;
+        position: relative;
+        transform: translate(100vw);
+       }
+    }
+    .menu-btn{
+        visibility:  visible !important;
+    }
+    .text{
+
+        text-align: center;
+        margin-top: 60% !important;
+    }
+    .svg__header{
+        width:  60%;
+        top: 3rem;
+        right: 19%;
+    }
+    .row__down{
+        display: none;
+    }
+     .icons {
+        top:  1rem !important; 
+        span{
+         display: none;
+        
+     }}
+    
+    
+}

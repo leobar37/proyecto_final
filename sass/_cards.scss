@@ -1,0 +1,43 @@
+@mixin  card  {
+
+   i{
+      padding:  1rem 0.2rem;
+      font-size: 6rem;
+   }
+     width: 25%;
+      text-align: center; 
+      margin: 0.2rem 1rem;
+      box-shadow:  $shadow-card;
+      padding: 0.5rem .8rem;
+     cursor: pointer;
+      &:hover{
+     transform: scale(1.1);
+   }
+}
+
+.one{
+    z-index: 1;
+   //  border:  2px solid black;
+    background: white;
+     margin-top: 10rem;
+    z-index: 2;
+     h2{
+        @extend %title;
+        text-align: center;
+    }
+     p{
+       @extend  %paragraph;
+       text-align: center;
+       padding-bottom: 5rem;
+     }
+     .cards{
+        @include flex_center(row);
+        flex-wrap: nowrap;
+        justify-content: center;
+      //   border:  2px solid black;
+        grid-template-columns: repeat(1fr , 3);
+     }
+     .card{
+        @include card;
+     }
+}

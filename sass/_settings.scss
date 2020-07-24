@@ -5,17 +5,57 @@ $color-primary : #85AEFF;
 $font-lato: 'Lato', sans-serif;
 $font-sans: 'Open Sans', sans-serif;
 $font-roboto: 'Roboto', sans-serif;
-
+$shadow-card :  7px 19px 33px -9px rgba(0,0,0,0.44);;
+$space_items : 10px;
 $fonts-size : ( 
-    "logo" : 28px,
-    "paragraph" : 16px,
-    "menu" :  20px 
+    "big" : 3rem,
+    "paragraph" : 0.8rem,
+    "menu" :  1.1rem,
+    "medium" : 1.8rem,
+    "small" : 0.9rem,
+    "second" : 1.3rem 
 );
-
-@mixin hover_state_menu {
-    border-bottom: 2px solid white;
-}
+// $gradient_port :  
 a{
     text-decoration: none;
     cursor: pointer;
+    
 }
+h6{
+ font-size: font_size(small);
+
+}
+
+@function font_size( $font){
+    @return map-get($map: $fonts-size , $key: $font);
+}
+
+@mixin flex_center($orientation){
+  display: flex;
+  flex-direction: $orientation;
+}
+
+  /*---------------------------mediqueriest --------------------------*/
+  @mixin transition-ease {
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  
+  @mixin media-md {
+    @media screen and (max-width: 768px) {
+      @content;
+    }
+  }
+  @mixin media-lg {
+    @media screen and (max-width: 1024px) {
+      @content;
+    }
+  }
+  @mixin media-xl {
+    @media screen and (max-width: 1600px) {
+      @content;
+    }
+  }
+  
+
+/*---------------------------end mediqueries ----------------------*/ 

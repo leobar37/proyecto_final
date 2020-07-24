@@ -1,7 +1,14 @@
 img{
     display: block;
-
 }
+ul{
+    list-style: none;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+}
+
 @mixin btn($style) {
     padding: 0.8rem 1rem;
     border: none;
@@ -9,7 +16,7 @@ img{
     outline: none;  
     cursor: pointer;
     @if ($style == border) {
-        border-radius: 15px;
+        border-radius: 8px;
     }
     @else {
         @if($style == rectangle){
@@ -17,11 +24,65 @@ img{
            background: transparent;
         }
      }
+   
 }
 
 
-.btn{
-    @include  btn(rectangle);
-    // background: blue;
- color: $color-white;
+%icons{
+    a i{
+        font-size: map-get($map: $fonts-size, $key: medium) ;
+    }
+    a{
+        // position: relative;
+     color:  $color-white;
+      display: inline-block;
+     margin:  0 $space-items;
+     span{
+        //  position: absolute;
+        transform: translateY(-100px);
+        padding-left: 0.5rem;
+        padding-bottom: 0.4rem;
+        font-size: font-size(small);
+     }  
+     padding: 0.8rem 0;
+    }
+
+}
+
+.icons{
+    @extend  %icons;
+}
+
+.logo{
+     text-transform: uppercase;
+     color: white;
+     
+}
+
+
+%title{
+    font-family: $font-lato;
+    font-size: font_size(medium);
+}
+%title_second{
+    font-family: $font-roboto;
+    font-size:  font_size(second);
+    font-weight: 500;
+}
+%paragraph{
+    line-height: 28px;
+    font-size: font_size(menu);
+    margin: 0.5rem 0;
+}
+
+%tecnologias{
+    font-family: $font-roboto;
+    font-weight: 400;
+
+}
+
+.btn_more{
+    @include  btn(border);
+    background: $color-primary ;
+    margin:   1rem 0.2rem;
 }

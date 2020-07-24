@@ -3,51 +3,148 @@ a {
   cursor: pointer;
 }
 
+h6 {
+  font-size: font_size(small);
+}
+
+/*---------------------------mediqueriest --------------------------*/
+/*---------------------------end mediqueries ----------------------*/
+img {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.icons a i {
+  font-size: 1.8rem;
+}
+.icons a {
+  color: #FFFFFF;
+  display: inline-block;
+  margin: 0 10px;
+  padding: 0.8rem 0;
+}
+.icons a span {
+  transform: translateY(-100px);
+  padding-left: 0.5rem;
+  padding-bottom: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.logo, header .text__heading {
+  text-transform: uppercase;
+  color: white;
+}
+
+footer h1, .servicios .conte_portafolio .portafolio__cards .card h2, .servicios h2, .one h2 {
+  font-family: "Lato", sans-serif;
+  font-size: 1.8rem;
+}
+
+.tecnologias .title, .servicios h3, .servicios .service .content h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.servicios .conte_portafolio .portafolio__cards .card p, .servicios .option p, .servicios .service .content p, .one p {
+  line-height: 28px;
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.tecnologias > div * {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.btn_more {
+  padding: 0.8rem 1rem;
+  border: none;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+  border-radius: 8px;
+  background: #85AEFF;
+  margin: 1rem 0.2rem;
+}
+
+/*--------------------------- hover statate itemst --------------------------*/
+/*---------------------------end  hover statate items ----------------------*/
 header .menu ul {
+  display: flex;
   list-style: none;
 }
 header .menu ul a {
   text-decoration: none;
   color: white;
-  margin: 0 15px;
-  font-size: 20px;
+  margin: 0 10px;
+  font-size: 1.1rem;
   text-transform: uppercase;
   border-bottom: 2px solid transparent;
 }
 header .menu ul a:hover {
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #FFFFFF;
+}
+header .menu ul a.open {
+  transform: translate(0);
+}
+header .open.menu {
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+}
+header .open.menu ul {
+  padding-top: 10rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header .open.menu ul a {
+  margin: 2rem 10px;
 }
 
 header {
   background-color: #4c4c4c;
   height: 98vh;
+  z-index: 0;
   position: relative;
-  /*=============================================
-  =            menu            =
-  =============================================*/
+  /*  menu */
+  /*---------------------------text header  --------------------------*/
+  /*---------------------------end text header ----------------------*/
+  /*---------------------------iconst --------------------------*/
+  /*---------------------------end icons ----------------------*/
+  /*---------------------------waves --------------------------*/
+  /*---------------------------end waves ----------------------*/
 }
-.svg__header {
-  width: calc(100% - 370px);
-  position: absolute;
-  top: 2rem;
-  right: -3rem;
+header .menu.open {
+  visibility: visible;
+  transform: translateX(0);
 }
-
-.row__down {
-  position: fixed;
-  top: calc(99vh - 20%);
-  left: calc(95%/2);
+header .menu-btn {
+  visibility: hidden;
 }
-.row__down a i {
+header .menu-btn.open {
+  visibility: visible;
+}
+header .text {
+  margin-top: 7%;
+}
+header .text__heading {
+  font-size: 3rem;
+}
+header .text__mute {
   color: #FFFFFF;
-  font-size: 4rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
 }
-
-img {
-  display: block;
-}
-
-.btn {
+header .text .btn_contact {
   padding: 0.8rem 1rem;
   border: none;
   text-transform: uppercase;
@@ -57,11 +154,408 @@ img {
   background: transparent;
   color: #FFFFFF;
 }
+header .text .btn_contact:hover {
+  transform: scale(1.1);
+}
+header .icons {
+  transition: transform 0.5s ease-in-out;
+  position: absolute;
+  top: calc(90vh - 150px);
+  left: 5%;
+  flex-direction: column;
+  width: 15rem;
+}
+header .icons.open {
+  top: 2rem;
+  left: 35%;
+}
+header .icons.open span {
+  display: none;
+}
+header .waves {
+  position: absolute;
+  bottom: 0rem;
+  width: 100%;
+  z-index: 0;
+  width: 40%;
+  z-index: -1;
+}
+
+.svg__header {
+  width: 70%;
+  position: absolute;
+  top: 2rem;
+  right: -3rem;
+}
+
+.row__down {
+  position: absolute;
+  top: calc(80vh - 20%);
+  left: calc(95%/2);
+}
+.row__down a i {
+  color: #FFFFFF;
+  font-size: 4rem;
+}
+.row__down.open {
+  visibility: hidden;
+}
+
+/*---------------------------burguer --------------------------*/
+.menu-btn {
+  position: absolute;
+  z-index: 1;
+  right: 1rem;
+  top: 1rem;
+  height: 20px;
+  width: 28px;
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+}
+.menu-btn__burger {
+  position: absolute;
+  right: 0;
+  top: 0.5rem;
+  width: 28px;
+  height: 3px;
+  background: #FFFFFF;
+  transition: transform 0.5s ease-in-out;
+}
+.menu-btn__burger::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  width: 28px;
+  height: 3px;
+  background: #FFFFFF;
+  transition: transform 0.5s ease-in-out;
+}
+.menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  width: 20px;
+  height: 3px;
+  background: #FFFFFF;
+  transition: transform 0.5s ease-in-out;
+}
+.menu-btn__burger.open {
+  transform: rotate(720deg);
+  background: transparent;
+}
+.menu-btn__burger.open::before {
+  transform: rotate(45deg) translate(5px, 8px);
+}
+.menu-btn__burger.open::after {
+  width: 28px;
+  transform: rotate(-45deg) translate(3px, -7px);
+}
+
+/*---------------------------end burguer----------------------*/
+/*--------------------------- items delayt --------------------------*/
+.menu ul a:nth-child(1) {
+  transition-delay: 0.23s;
+}
+
+.menu ul a:nth-child(2) {
+  transition-delay: 0.33s;
+}
+
+.menu ul a:nth-child(3) {
+  transition-delay: 0.43s;
+}
+
+.menu ul a:nth-child(4) {
+  transition-delay: 0.53s;
+}
+
+/*---------------------------end  items delay ----------------------*/
+@media screen and (max-width: 768px) {
+  .menu {
+    visibility: hidden;
+  }
+  .menu ul a {
+    transition: transform 0.5s ease-in-out;
+    position: relative;
+    transform: translate(100vw);
+  }
+
+  .menu-btn {
+    visibility: visible !important;
+  }
+
+  .text {
+    text-align: center;
+    margin-top: 60% !important;
+  }
+
+  .svg__header {
+    width: 60%;
+    top: 3rem;
+    right: 19%;
+  }
+
+  .row__down {
+    display: none;
+  }
+
+  .icons {
+    top: 1rem !important;
+  }
+  .icons span {
+    display: none;
+  }
+}
+.one {
+  z-index: 1;
+  background: white;
+  margin-top: 10rem;
+  z-index: 2;
+}
+.one h2 {
+  text-align: center;
+}
+.one p {
+  text-align: center;
+  padding-bottom: 5rem;
+}
+.one .cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  grid-template-columns: repeat(1fr, 3);
+}
+.one .card {
+  width: 25%;
+  text-align: center;
+  margin: 0.2rem 1rem;
+  box-shadow: 7px 19px 33px -9px rgba(0, 0, 0, 0.44);
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+}
+.one .card i {
+  padding: 1rem 0.2rem;
+  font-size: 6rem;
+}
+.one .card:hover {
+  transform: scale(1.1);
+}
+
+.servicios {
+  margin-top: 5rem;
+  /*---------------------------options of virtual store --------------------------*/
+  /*---------------------------end options of virtual store----------------------*/
+  /*---------------------------bg portafoliot --------------------------*/
+  /*---------------------------end bg portafolio ----------------------*/
+}
+.servicios h2 {
+  text-align: center;
+}
+.servicios .service div > img {
+  width: 100%;
+}
+.servicios .service .content h2 {
+  text-align: left;
+  text-transform: uppercase;
+}
+.servicios .service .content p {
+  text-align: left;
+}
+.servicios .service .portafolio {
+  padding-top: 6rem;
+}
+.servicios h3 {
+  margin-left: 35%;
+  padding: 1.5rem 0.5rem;
+}
+.servicios .card_options {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.servicios .option {
+  margin: 1rem 1.5rem;
+  position: relative;
+  width: 25vw;
+  background: #424242;
+}
+.servicios .option p {
+  padding: 1.2rem 0.9rem;
+  color: white;
+  text-align: center;
+  font-style: italic;
+}
+.servicios .option .round {
+  position: absolute;
+  text-align: center;
+  right: -1.5rem;
+  top: -1.5rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background: #85AEFF;
+}
+.servicios .option .round b {
+  color: white;
+  display: block;
+  padding-top: 28%;
+}
+.servicios .option .badge {
+  position: absolute;
+  background: #85AEFF;
+  padding: 0.6rem 0.5rem;
+  border-radius: 8px;
+  bottom: -1rem;
+  left: 30%;
+  font-size: 1rem;
+}
+.servicios .conte_portafolio {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 120vh;
+}
+.servicios .conte_portafolio .img {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110vh;
+  position: absolute;
+  background-image: linear-gradient(180deg, rgba(6, 66, 66, 0), #002024), url("../asssets/img/BG-PORTAFOLIO.jpg");
+}
+.servicios .conte_portafolio .elipse {
+  top: -12rem;
+  left: -12rem;
+  position: absolute;
+  width: 120vw;
+  height: 400px;
+  border-radius: 50%;
+  background-color: white;
+}
+.servicios .conte_portafolio .title {
+  position: absolute;
+  top: 6rem;
+  z-index: 50;
+  font-family: "Lato", sans-serif;
+  font-style: italic;
+  left: 24%;
+  color: black;
+}
+.servicios .conte_portafolio .portafolio__cards {
+  position: absolute;
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  top: 35%;
+  left: 15%;
+}
+.servicios .conte_portafolio .portafolio__cards .card {
+  width: 30%;
+  color: white;
+  margin: 1.2rem 10%;
+}
+.servicios .conte_portafolio .portafolio__cards .card h2 {
+  text-align: left;
+  font-size: 1rem;
+}
+.servicios .conte_portafolio .portafolio__cards .card p {
+  font-style: italic;
+  font-size: 0.8rem;
+}
+.servicios .portafolio {
+  position: relative;
+}
+.servicios .portafolio div img {
+  width: 50%;
+  top: -2rem;
+  left: 35%;
+  position: absolute;
+}
+.servicios .portafolio div img.exception {
+  width: 80%;
+  left: 18%;
+  top: 2rem;
+}
+
+/*---------------------------tecnologias --------------------------*/
+.tecnologias {
+  margin-top: 8rem;
+  height: 40vh;
+  width: 100%;
+  color: white;
+}
+.tecnologias .row div {
+  height: 40vh;
+  text-align: center;
+}
+.tecnologias .row div > * {
+  text-transform: uppercase;
+}
+.tecnologias .title {
+  background-color: white;
+  color: #424242;
+}
+.tecnologias .frontend {
+  background-color: #700353;
+}
+.tecnologias .frontend .item {
+  margin: 0 2.7rem;
+}
+.tecnologias .almacenamiento {
+  background-color: #996692;
+  text-align: center;
+}
+.tecnologias .almacenamiento > img {
+  width: 60%;
+  margin: 1rem auto;
+}
+.tecnologias .backend {
+  background-color: #8160B7;
+}
+.tecnologias .backend .item img {
+  width: 80%;
+}
+.tecnologias .backend .item img.express {
+  margin-top: 2rem;
+}
+
+/*---------------------------end tecnologias----------------------*/
+footer {
+  margin-top: 20rem;
+  height: 40vh;
+  color: white;
+  background: #002024;
+}
+footer .columns div {
+  margin-top: 3rem;
+}
+footer .columns div > li {
+  margin: 1.2rem 0;
+}
+footer h1 {
+  text-transform: uppercase;
+}
+footer .menu ul li {
+  margin: 1rem 0;
+}
+footer .menu ul li a:hover {
+  border-bottom: 2px solid #FFFFFF;
+}
 
 body {
   background: #FFFFFF;
   font-size: 18px;
   font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /*# sourceMappingURL=main.css.map */

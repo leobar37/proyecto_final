@@ -1,0 +1,69 @@
+  /*---------------------------tecnologias --------------------------*/
+  %izq{
+       width: 40%;
+    //    align-self: flex-start;
+
+  }   
+  %der{
+      width: 60%;
+    //   float: left;
+    //   align-self: flex-end;
+  }
+.tecnologias{
+  margin-top: 8rem;
+  height: 40vh;
+  width: 100%;
+  color: white;
+  $heigh : 40vh;
+    > div  *{
+        @extend %tecnologias;
+    }
+     .row  div{
+             height: $heigh;
+             text-align: center;
+             > * {
+                text-transform: uppercase;
+            }
+     }
+   .title{
+       background-color: white;
+ 
+       color: $color-secondary;
+       @extend %title_second;
+    }
+    .frontend{
+        background-color:#700353;
+      .item{
+          margin: 0 2.7rem;
+      }
+        //    width: ;
+    }
+    .almacenamiento{
+        background-color:#996692;
+    
+     
+        text-align: center;
+         > img{
+             width: 60%;
+             margin: 1rem auto;
+         }
+   }
+   .backend{
+    
+       background-color:#8160B7;
+       .item{
+        //    border: 2px solid white;
+           img{
+               width:  80%;
+               &.express{
+                   margin-top: 2rem;
+               }
+           }
+            // margin: 0 1re1m;
+    }
+   }
+  
+
+}
+
+   /*---------------------------end tecnologias----------------------*/

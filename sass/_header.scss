@@ -1,6 +1,19 @@
-$space_items : 15px;
+
+  /*--------------------------- hover statate itemst --------------------------*/
+  @mixin hover_state_menu($condition) {
+    $result : map-get(
+      (
+        open :  2px solid  $color-primary,
+        normal : 2px solid  $color-white
+      ) , $condition
+    );
+    border-bottom:  $result;
+  }
+/*---------------------------end  hover statate items ----------------------*/ 
+
 %menu{
-    ul{
+  ul{
+        display: flex;
         list-style: none;
             a{
                text-decoration: none;
@@ -9,39 +22,197 @@ $space_items : 15px;
                font-size: map-get($map: $fonts-size, $key: menu);
                text-transform: uppercase;
                border-bottom: 2px solid transparent;
+          
                &:hover{
-                @include  hover_state_menu;
+                @include  hover_state_menu(normal);
+               }
+               &.open{
+                 transform: translate(0);
                }
             }
-    }   
+        
+   
+          }   
+    &.open{
+      height: 100vh;
+      background: rgba($color: black, $alpha: 0.9);
+      ul{
+        // border: 2px solid white;
+        padding-top: 10rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        a{
+          margin: 2rem $space_items;
+        }
+      }
+    }
 }
 header{
     background-color:  lighten($color: $color-secondary, $amount: 4);
     height: 98vh;
+    z-index: 0;
     position: relative;
-  /*=============================================
-  =            menu            =
-  =============================================*/
-    .menu{
-     @extend %menu;
-    }
-
+     /*  menu */ 
+  .menu{
+   
+    @extend %menu;
+     &.open{
+      visibility: visible ;
+      transform: translateX(0);
+     }
   
+  }
+  .menu-btn{
+      visibility: hidden;
+      &.open{
+          visibility: visible;
+      }
+  }
+    /*---------------------------text header  --------------------------*/
+      .text{
+       margin-top: 7%;
+          &__heading{
+             @extend .logo;
+             font-size:  font_size(big);
+          }
+          &__mute{
+              color: $color-white;
+              font-family: $font-sans;
+              font-weight: 500;
+          }
+          .btn_contact{
+            @include  btn(rectangle);
+            // background: blue;
+            &:hover{
+            transform: scale(1.1);
+            }
+            color: $color-white;
+          }
+   
+      }
 
+  /*---------------------------end text header ----------------------*/ 
+ 
+    /*---------------------------iconst --------------------------*/
+    .icons{
+       @include  transition-ease;
+      position:  absolute;
+        top: calc(90vh - 150px);
+        left: 5%;
+       flex-direction: column;
+       width: 15rem;
+       &.open{
+        top: 2rem;
+         left:35%;
+         span{
+           display: none;
+         }
+       }
+     }
+  /*---------------------------end icons ----------------------*/ 
+    /*---------------------------waves --------------------------*/
+   .waves{
+     position: absolute;
+     bottom: 0rem;
+     width: 100%;
+     z-index:0;
+     width: 40%;
+     z-index: -1;
+     
+   }
+    
+  /*---------------------------end waves ----------------------*/ 
 }
 .svg__header{
-    width: calc(100% - 370px);
+    width: 70%;
     position: absolute;
      top: 2rem;
      right: -3rem;
 }
 .row__down{
-    position: fixed;
-    top: calc(99vh - 20%);
+    position: absolute;
+    top: calc(80vh - 20%);
+    // background: black;
     left: calc(95%/2);
      a i{
          color: $color-white;
           font-size: 4rem;
        }
+
+     &.open{
+       visibility: hidden;
+     }  
     
 }
+
+  /*---------------------------burguer --------------------------*/
+
+  .menu-btn {
+    position: absolute;
+    z-index: 1;
+    right: 1rem;
+    top: 1rem;
+    height: 20px;
+    width: 28px;
+    cursor: pointer;
+    @include transition-ease;
+  
+    &__burger {
+      position: absolute;
+      right: 0;
+      top: 0.5rem;
+      width: 28px;
+      height: 3px;
+      background: $color-white;
+      @include transition-ease;
+  
+      &::before {
+        content: '';
+        position: absolute;
+        top: -8px;
+        width: 28px;
+        height: 3px;
+        background: $color-white;
+        @include transition-ease;
+      }
+  
+      &::after {
+        content: '';
+        position: absolute;
+        top: 8px;
+        width: 20px;
+        height: 3px;
+        background: $color-white;
+        @include transition-ease;
+      }
+  
+      &.open {
+        transform: rotate(720deg);
+        background: transparent;
+  
+        &::before {
+          transform: rotate(45deg) translate(5px, 8px);
+        }
+  
+        &::after {
+          width: 28px;
+          transform: rotate(-45deg) translate(3px, -7px);
+        }
+      }
+    }
+  }
+
+/*---------------------------end burguer----------------------*/ 
+
+
+
+/*--------------------------- items delayt --------------------------*/
+  @for $i from 1 through 4 {
+  .menu ul a:nth-child(#{$i}){
+      transition-delay: ($i * 0.1s) + 0.13s;
+    }
+  }
+
+/*---------------------------end  items delay ----------------------*/ 
+   
