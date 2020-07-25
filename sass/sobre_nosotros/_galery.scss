@@ -1,0 +1,57 @@
+%card_element{
+  position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+.galeria{
+    width: 55%;
+    margin: 0 auto;
+    .card{
+        outline: none;
+        border: none;
+    
+    }
+    .card .content{
+        cursor: pointer;
+        position: relative;
+      border-radius: 10px;
+        height: 370px;
+       background-color: #444444; 
+       margin: 0 1rem;
+       font-family:  $font-sans;
+       color: white;
+       figure{
+           position: absolute;
+           width:  70%;
+           img{
+               width: 100%;
+           }
+       }
+         > *:not(figure){
+             @extend %card_element;
+         }
+        h2{
+            bottom: 20%;
+            font-size: 25px;
+        }
+        span{
+            font-style: italic;
+            font-weight: 300;
+             bottom: 18%;
+        }
+        .icons{
+            @include transition_two(transform);
+            bottom:0;
+            
+           a:hover{
+             transform: scale(1.1);
+           }
+            
+        }
+
+   
+    }
+}
+
+

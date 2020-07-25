@@ -1,0 +1,55 @@
+.valores{
+    position: relative;
+    margin-top: 5rem;
+    // border: 2px solid black;
+    height: 80vh;
+  figure{
+      position: absolute;
+       width: 50%;
+       left: 25%;
+       top: 5rem;
+
+  }
+  .circle{
+      position: absolute;
+      width: 200px;
+      height: 150px;
+      border-radius:50%;
+      background: #424242;
+      text-align: center;
+      h2{
+          margin-top: 3.1rem;
+          font-family: $font-lato;
+          font-size: 40;
+           color: white;
+           text-align: center;
+          font-style: italic;
+      }
+    &.one{
+        top: -10rem;
+         left: 10rem;
+         &.down{
+             top: 25rem;
+         }
+    }
+     &.two{
+         top: 0;
+        left: 30rem;
+     }
+     &.three{
+      left: 50rem;
+     }
+     &.down{
+         top: 35rem;
+     }
+  }   
+
+}
+h1{
+    margin-top: 10rem;
+    text-align: center;
+}
+.somos{
+    @extend %paragraph;
+    text-align: center;
+}

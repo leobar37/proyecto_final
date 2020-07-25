@@ -1,0 +1,65 @@
+
+ h1{
+     text-align: center;
+     @extend %title;
+    &.val{
+        margin-top: 20rem;
+    } 
+ }
+ figure{
+    position: absolute;
+    img{
+        width: 100%;
+    }
+}
+.acerca_de{
+    position: relative;
+    height: 120vh;
+    width: 100%;
+    // border: 2px solid black;
+    // overflow-x: hidden;
+ 
+    article{
+        position: absolute;
+        color: $color-white;
+        width: 35%;
+        h1{
+            text-align: center;;
+        }
+         p{
+             text-align: center;
+             @extend %paragraph;
+         }
+    }
+   .img_mision{
+       width: 45%;
+       left: -12rem;
+   }
+   .img_vision{
+       width: 50%;
+       bottom: -25rem;
+       right: -10rem;
+   }
+   .trazo_mision{
+       width: 80%;
+        right: -21.5rem;
+   }
+   .trazo_vision{
+       width: 90%;
+       left: -30rem;
+       bottom: -30rem;
+   }
+
+
+
+   .mision{
+     
+        top: 6rem;
+       right: -2rem;
+   }
+   .vision{
+    top: 35rem;
+    left: -8rem;
+   }
+}
+

@@ -52,13 +52,10 @@ ul li a{
 .icons{
     @extend  %icons;
 }
-
 .logo{
      text-transform: uppercase;
-     color: white;
-     
+     color: white;     
 }
-
 
 %title{
     font-family: $font-lato;
@@ -78,7 +75,6 @@ ul li a{
 %tecnologias{
     font-family: $font-roboto;
     font-weight: 400;
-
 }
 
 .btn_more{

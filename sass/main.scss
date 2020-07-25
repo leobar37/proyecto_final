@@ -5,7 +5,13 @@
 @import "cards";
 @import "servicios/servicios";
 @import "tecnologias/tecnologias";
-@import "footer";;
+@import "footer";
+  /*---------------------------sobre nosotros --------------------------*/
+ @import "sobre_nosotros/main";
+ @import "portafolio/main";
+
+
+/*---------------------------end sobre nosotros----------------------*/ 
 body{
     background:  $color-white;
     font-size: 18px;

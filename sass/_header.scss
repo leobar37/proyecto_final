@@ -1,5 +1,4 @@
-
-  /*--------------------------- hover statate itemst --------------------------*/
+/*--------------------------- hover statate itemst -------------------------*/
   @mixin hover_state_menu($condition) {
     $result : map-get(
       (
@@ -10,7 +9,6 @@
     border-bottom:  $result;
   }
 /*---------------------------end  hover statate items ----------------------*/ 
-
 %menu{
   ul{
         display: flex;
@@ -53,15 +51,13 @@ header{
     height: 98vh;
     z-index: 0;
     position: relative;
-     /*  menu */ 
+     /*menu*/ 
   .menu{
-   
     @extend %menu;
      &.open{
       visibility: visible ;
       transform: translateX(0);
      }
-  
   }
   .menu-btn{
       visibility: hidden;

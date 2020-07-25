@@ -1,0 +1,154 @@
+.portafolio{
+  h1{
+      width: 100%;
+      text-align: center;
+  }
+
+
+ .job{
+     margin-top: 10rem;
+     text-align: left;
+    .phrase{
+        position: relative;
+        @extend %paragraph;
+        font-style: italic;
+        font-weight: 400;
+      
+        p{
+            position: absolute;
+            left: -5rem;
+            width: 90%;
+            bottom: 7rem;
+           
+        }
+        &.der{
+           p{
+               width: 100%;
+               left: 8rem;
+           }
+        }
+        // text-align: center;
+        
+    }
+     
+    .bg_image{
+        position: relative;
+     height: 55vh;
+     color:  $color-white;
+
+    //  background-color: linear-gradient( 360deg,rgba(6, 66, 66, 1), rgba(0, 32, 36, 0.7) );
+     background-size: cover;
+      .text{
+          position: absolute;
+          width: 50%;
+          right: 0;
+          bottom: 3rem;
+          &.der{
+            left: 5rem !important;
+            // border: 2px solid wheat;
+          }
+         //  right: -20rem;
+         .btn_contact{
+             @include  btn(rectangle);
+             // background: blue;
+             p{
+                 width: 100%;
+             }
+             &:hover{
+             transform: scale(1.1);
+             }
+             color: $color-white;
+           }
+      }
+    }
+ }
+   /*---------------------------paginatet --------------------------*/
+   .paginate{
+    //    border: 2px solid black;
+       text-align: center;
+       margin-top: 10rem;
+       width: 100%;
+       .badge{
+        display: inline-block;
+           background-color: black;
+           width:  8%;
+        //    text-align: center;
+        //   display: flex;
+           border-radius: 10px;
+           height:  1.5rem;
+           cursor: pointer;
+           .active{
+               
+            margin-left: 10%;
+               margin-top: 5.5%;
+               height: 0.8rem;
+               border-radius: 10px;
+               width: 85%;
+             background: white;
+
+           }
+        //    .span{
+            //    background-color: white;
+        //    }
+       }
+
+   }
+ 
+ /*---------------------------end paginate ----------------------*/ 
+   /*---------------------------resñast --------------------------*/
+ 
+    .resenias{
+        margin-top: 4rem;
+        .titulo{
+            @extend %title;
+            text-transform: uppercase;
+            text-align: center;
+            font-style: italic; ;
+        }
+         > .row{
+             margin-top: 2rem;
+
+             div p{
+                 @extend %paragraph;
+                 font-size: .9rem;
+             }
+             div h2{
+               @extend %title;
+
+             }
+         }
+    }
+ /*---------------------------end resñas ----------------------*/ 
+   /*---------------------------resenias --------------------------*/
+  .sen_resenia{
+      background-color: $color-secondary;
+      height: 100vh;
+      margin-top: 3rem;
+      padding-top: 3rem;
+      color:  $color-white;
+        h2{
+            @extend %title;
+            text-align: center;
+        }
+      textarea{
+        margin-left: 22%;
+        // border: 2px solid black;
+        min-width: 800px;
+        min-height: 300px;
+        outline: none;
+        resize: none;
+        overflow: auto;
+     opacity: 0.6;
+      }
+     button{
+         margin-top: 2rem;
+         @include btn(border);
+         display: inline-block;
+         margin-left: 46%;
+         background-color:  black;
+         color: white;
+     }
+  }
+
+ /*---------------------------end resenias ----------------------*/ 
+}

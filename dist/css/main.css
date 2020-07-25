@@ -1,3 +1,4 @@
+@charset "UTF-8";
 a {
   text-decoration: none;
   cursor: pointer;
@@ -43,7 +44,7 @@ ul li a {
   color: white;
 }
 
-footer h1, .servicios .conte_portafolio .portafolio__cards .card h2, .servicios h2, .one h2 {
+.folio .portafolio .sen_resenia h2, .folio .portafolio .resenias > .row div h2, .folio .portafolio .resenias .titulo, .folio header .text p, .sobre_nosotros h1, footer h1, .servicios .conte_portafolio .portafolio__cards .card h2, .servicios h2, .one h2 {
   font-family: "Lato", sans-serif;
   font-size: 1.8rem;
 }
@@ -54,7 +55,7 @@ footer h1, .servicios .conte_portafolio .portafolio__cards .card h2, .servicios 
   font-weight: 500;
 }
 
-.servicios .conte_portafolio .portafolio__cards .card p, .servicios .option p, .servicios .service .content p, .one p {
+.folio .portafolio .resenias > .row div p, .folio .portafolio .job .phrase, .sobre_nosotros .somos, .sobre_nosotros .acerca_de article p, .servicios .conte_portafolio .portafolio__cards .card p, .servicios .option p, .servicios .service .content p, .one p {
   line-height: 28px;
   font-size: 1.1rem;
   margin: 0.5rem 0;
@@ -76,7 +77,7 @@ footer h1, .servicios .conte_portafolio .portafolio__cards .card h2, .servicios 
   margin: 1rem 0.2rem;
 }
 
-/*--------------------------- hover statate itemst --------------------------*/
+/*--------------------------- hover statate itemst -------------------------*/
 /*---------------------------end  hover statate items ----------------------*/
 header .menu ul {
   display: flex;
@@ -115,7 +116,7 @@ header {
   height: 98vh;
   z-index: 0;
   position: relative;
-  /*  menu */
+  /*menu*/
   /*---------------------------text header  --------------------------*/
   /*---------------------------end text header ----------------------*/
   /*---------------------------iconst --------------------------*/
@@ -547,6 +548,319 @@ footer .menu ul li a:hover {
   border-bottom: 2px solid #FFFFFF;
 }
 
+/*---------------------------sobre nosotros --------------------------*/
+.sobre_nosotros h1 {
+  text-align: center;
+}
+.sobre_nosotros h1.val {
+  margin-top: 20rem;
+}
+.sobre_nosotros figure {
+  position: absolute;
+}
+.sobre_nosotros figure img {
+  width: 100%;
+}
+.sobre_nosotros .acerca_de {
+  position: relative;
+  height: 120vh;
+  width: 100%;
+}
+.sobre_nosotros .acerca_de article {
+  position: absolute;
+  color: #FFFFFF;
+  width: 35%;
+}
+.sobre_nosotros .acerca_de article h1 {
+  text-align: center;
+}
+.sobre_nosotros .acerca_de article p {
+  text-align: center;
+}
+.sobre_nosotros .acerca_de .img_mision {
+  width: 45%;
+  left: -12rem;
+}
+.sobre_nosotros .acerca_de .img_vision {
+  width: 50%;
+  bottom: -25rem;
+  right: -10rem;
+}
+.sobre_nosotros .acerca_de .trazo_mision {
+  width: 80%;
+  right: -21.5rem;
+}
+.sobre_nosotros .acerca_de .trazo_vision {
+  width: 90%;
+  left: -30rem;
+  bottom: -30rem;
+}
+.sobre_nosotros .acerca_de .mision {
+  top: 6rem;
+  right: -2rem;
+}
+.sobre_nosotros .acerca_de .vision {
+  top: 35rem;
+  left: -8rem;
+}
+.sobre_nosotros .valores {
+  position: relative;
+  margin-top: 5rem;
+  height: 80vh;
+}
+.sobre_nosotros .valores figure {
+  position: absolute;
+  width: 50%;
+  left: 25%;
+  top: 5rem;
+}
+.sobre_nosotros .valores .circle {
+  position: absolute;
+  width: 200px;
+  height: 150px;
+  border-radius: 50%;
+  background: #424242;
+  text-align: center;
+}
+.sobre_nosotros .valores .circle h2 {
+  margin-top: 3.1rem;
+  font-family: "Lato", sans-serif;
+  font-size: 40;
+  color: white;
+  text-align: center;
+  font-style: italic;
+}
+.sobre_nosotros .valores .circle.one {
+  top: -10rem;
+  left: 10rem;
+}
+.sobre_nosotros .valores .circle.one.down {
+  top: 25rem;
+}
+.sobre_nosotros .valores .circle.two {
+  top: 0;
+  left: 30rem;
+}
+.sobre_nosotros .valores .circle.three {
+  left: 50rem;
+}
+.sobre_nosotros .valores .circle.down {
+  top: 35rem;
+}
+.sobre_nosotros h1 {
+  margin-top: 10rem;
+  text-align: center;
+}
+.sobre_nosotros .somos {
+  text-align: center;
+}
+.sobre_nosotros .galeria .card .content > *:not(figure) {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+.sobre_nosotros .galeria {
+  width: 55%;
+  margin: 0 auto;
+}
+.sobre_nosotros .galeria .card {
+  outline: none;
+  border: none;
+}
+.sobre_nosotros .galeria .card .content {
+  cursor: pointer;
+  position: relative;
+  border-radius: 10px;
+  height: 370px;
+  background-color: #444444;
+  margin: 0 1rem;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+}
+.sobre_nosotros .galeria .card .content figure {
+  position: absolute;
+  width: 70%;
+}
+.sobre_nosotros .galeria .card .content figure img {
+  width: 100%;
+}
+.sobre_nosotros .galeria .card .content h2 {
+  bottom: 20%;
+  font-size: 25px;
+}
+.sobre_nosotros .galeria .card .content span {
+  font-style: italic;
+  font-weight: 300;
+  bottom: 18%;
+}
+.sobre_nosotros .galeria .card .content .icons {
+  transition: transform 0.5s ease-in-out;
+  bottom: 0;
+}
+.sobre_nosotros .galeria .card .content .icons a:hover {
+  transform: scale(1.1);
+}
+
+.folio header {
+  background-image: linear-gradient(90deg, #064242, rgba(0, 32, 36, 0.7)), url("../asssets/img/bg_portafolio.png");
+  background-size: cover;
+  background-position: top left;
+  height: 98vh;
+}
+.folio header h2.title {
+  color: white;
+}
+.folio header .menu ul {
+  text-align: right;
+}
+.folio header .text {
+  margin-top: 10%;
+}
+.folio header .text p {
+  color: white;
+  font-size: 1.2rem;
+  width: 36rem;
+  text-align: center;
+  font-weight: 300;
+}
+.folio header .text .btn_contact {
+  margin-top: 1rem;
+  margin-left: 6%;
+}
+.folio .portafolio {
+  /*---------------------------paginatet --------------------------*/
+  /*---------------------------end paginate ----------------------*/
+  /*---------------------------resñast --------------------------*/
+  /*---------------------------end resñas ----------------------*/
+  /*---------------------------resenias --------------------------*/
+  /*---------------------------end resenias ----------------------*/
+}
+.folio .portafolio h1 {
+  width: 100%;
+  text-align: center;
+}
+.folio .portafolio .job {
+  margin-top: 10rem;
+  text-align: left;
+}
+.folio .portafolio .job .phrase {
+  position: relative;
+  font-style: italic;
+  font-weight: 400;
+}
+.folio .portafolio .job .phrase p {
+  position: absolute;
+  left: -5rem;
+  width: 90%;
+  bottom: 7rem;
+}
+.folio .portafolio .job .phrase.der p {
+  width: 100%;
+  left: 8rem;
+}
+.folio .portafolio .job .bg_image {
+  position: relative;
+  height: 55vh;
+  color: #FFFFFF;
+  background-size: cover;
+}
+.folio .portafolio .job .bg_image .text {
+  position: absolute;
+  width: 50%;
+  right: 0;
+  bottom: 3rem;
+}
+.folio .portafolio .job .bg_image .text.der {
+  left: 5rem !important;
+}
+.folio .portafolio .job .bg_image .text .btn_contact {
+  padding: 0.8rem 1rem;
+  border: none;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+  border: 2px solid #FFFFFF;
+  background: transparent;
+  color: #FFFFFF;
+}
+.folio .portafolio .job .bg_image .text .btn_contact p {
+  width: 100%;
+}
+.folio .portafolio .job .bg_image .text .btn_contact:hover {
+  transform: scale(1.1);
+}
+.folio .portafolio .paginate {
+  text-align: center;
+  margin-top: 10rem;
+  width: 100%;
+}
+.folio .portafolio .paginate .badge {
+  display: inline-block;
+  background-color: black;
+  width: 8%;
+  border-radius: 10px;
+  height: 1.5rem;
+  cursor: pointer;
+}
+.folio .portafolio .paginate .badge .active {
+  margin-left: 10%;
+  margin-top: 5.5%;
+  height: 0.8rem;
+  border-radius: 10px;
+  width: 85%;
+  background: white;
+}
+.folio .portafolio .resenias {
+  margin-top: 4rem;
+}
+.folio .portafolio .resenias .titulo {
+  text-transform: uppercase;
+  text-align: center;
+  font-style: italic;
+}
+.folio .portafolio .resenias > .row {
+  margin-top: 2rem;
+}
+.folio .portafolio .resenias > .row div p {
+  font-size: 0.9rem;
+}
+.folio .portafolio .sen_resenia {
+  background-color: #424242;
+  height: 100vh;
+  margin-top: 3rem;
+  padding-top: 3rem;
+  color: #FFFFFF;
+}
+.folio .portafolio .sen_resenia h2 {
+  text-align: center;
+}
+.folio .portafolio .sen_resenia textarea {
+  margin-left: 22%;
+  min-width: 800px;
+  min-height: 300px;
+  outline: none;
+  resize: none;
+  overflow: auto;
+  opacity: 0.6;
+}
+.folio .portafolio .sen_resenia button {
+  margin-top: 2rem;
+  padding: 0.8rem 1rem;
+  border: none;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+  border-radius: 8px;
+  display: inline-block;
+  margin-left: 46%;
+  background-color: black;
+  color: white;
+}
+.folio footer {
+  margin-top: 0;
+}
+
+/*---------------------------end sobre nosotros----------------------*/
 body {
   background: #FFFFFF;
   font-size: 18px;
