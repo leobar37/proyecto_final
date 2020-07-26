@@ -44,7 +44,7 @@ ul li a {
   color: white;
 }
 
-.folio .portafolio .sen_resenia h2, .folio .portafolio .resenias > .row div h2, .folio .portafolio .resenias .titulo, .folio header .text p, .sobre_nosotros h1, footer h1, .servicios .conte_portafolio .portafolio__cards .card h2, .servicios h2, .one h2 {
+.contacto header .menu .title, .folio .portafolio .sen_resenia h2, .folio .portafolio .resenias > .row div h2, .folio .portafolio .resenias .titulo, .folio header .text p, .sobre_nosotros h1, footer h1, .servicios .conte_portafolio .portafolio__cards .card h2, .servicios h2, .one h2 {
   font-family: "Lato", sans-serif;
   font-size: 1.8rem;
 }
@@ -85,14 +85,28 @@ header .menu ul {
 }
 header .menu ul a {
   text-decoration: none;
+  position: relative;
   color: white;
   margin: 0 10px;
   font-size: 1.1rem;
   text-transform: uppercase;
   border-bottom: 2px solid transparent;
 }
-header .menu ul a:hover {
-  border-bottom: 2px solid #FFFFFF;
+header .menu ul a::after {
+  position: absolute;
+  transition: all 0.5s;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: ".";
+  color: transparent;
+  background: #aaa;
+  height: 2px;
+}
+header .menu ul a:hover:after {
+  width: 100%;
 }
 header .menu ul a.open {
   transform: translate(0);
@@ -161,9 +175,8 @@ header .text .btn_contact:hover {
 header .icons {
   transition: transform 0.5s ease-in-out;
   position: absolute;
-  top: calc(90vh - 150px);
+  top: calc(90vh - 220px);
   left: 5%;
-  flex-direction: column;
   width: 15rem;
 }
 header .icons.open {
@@ -858,6 +871,126 @@ footer .menu ul li a:hover {
 }
 .folio footer {
   margin-top: 0;
+}
+
+.contacto {
+  /*---------------------------iconst --------------------------*/
+  /*---------------------------end icons ----------------------*/
+  /*---------------------------titlet --------------------------*/
+  /*---------------------------end title ----------------------*/
+}
+.contacto header {
+  height: auto;
+}
+.contacto .contForm {
+  width: 75vw;
+  height: 60vh;
+  display: flex;
+  flex-direction: row;
+}
+.contacto .contForm .present {
+  width: 40%;
+  height: 100%;
+  position: relative;
+}
+.contacto .contForm .present figure {
+  width: 150%;
+  position: absolute;
+  left: -15rem;
+}
+.contacto .contForm .present figure img {
+  width: 100%;
+}
+.contacto .contForm .form {
+  width: 100%;
+  padding: 0 3rem;
+}
+.contacto .contForm .form .input_group {
+  margin: 1.5rem 0;
+  width: 45%;
+  margin-right: 4rem;
+}
+.contacto .contForm .form .input_group input[type=text], .contacto .contForm .form .input_group input[type=email] {
+  width: 100%;
+  padding: 0.8rem 0.5rem;
+  border: none;
+  border-radius: 9px;
+  border-bottom: 1px solid #424242;
+}
+.contacto .contForm .form .input_group input[type=text]:focus, .contacto .contForm .form .input_group input[type=email]:focus {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid blue;
+}
+.contacto .contForm .form textarea {
+  display: block;
+  margin-left: 0%;
+  min-width: 92%;
+  border: none;
+  color: black;
+  outline: none;
+  min-height: 200px;
+  resize: none;
+  padding: 1rem 0.5rem;
+  border-bottom: 2px solid #424242;
+  border-radius: 10px;
+}
+.contacto .contForm .form button {
+  padding: 0.8rem 1rem;
+  border: none;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+  border-radius: 8px;
+  text-align: center;
+  padding: 0.8rem 1.5rem;
+  background-color: black;
+  color: white;
+}
+.contacto main {
+  height: 90vh;
+  background-color: #424242;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.contacto .center {
+  text-align: center;
+  padding: 1rem 0;
+}
+@media screen and (max-width: 768px) {
+  .contacto .contForm {
+    width: 100%;
+  }
+  .contacto .contForm .present {
+    display: none;
+  }
+}
+.contacto main .icons {
+  position: absolute;
+  top: 86vh;
+  left: 10%;
+  z-index: 5;
+}
+.contacto main .icons a i {
+  font-size: 40px;
+}
+.contacto main .icons a span {
+  display: none;
+}
+@keyframes icons {
+  from {
+    display: block;
+    transform: translateX(-500px);
+  }
+  to {
+    transform: translateY(500px);
+  }
+}
+.contacto header .menu .title {
+  color: white;
+  margin-top: 1rem;
 }
 
 /*---------------------------end sobre nosotros----------------------*/

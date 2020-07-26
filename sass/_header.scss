@@ -15,14 +15,28 @@
         list-style: none;
             a{
                text-decoration: none;
+              position: relative;
                color: white;
                margin: 0 $space_items;
                font-size: map-get($map: $fonts-size, $key: menu);
                text-transform: uppercase;
                border-bottom: 2px solid transparent;
-          
-               &:hover{
-                @include  hover_state_menu(normal);
+               &::after{
+                position: absolute;
+                transition: all .5s;
+                bottom:  -10px;
+                left: 0;
+                right: 0;
+                margin: auto;
+                width: 0%;
+                content: '.';
+                color: transparent;
+                background: #aaa;
+                height: 2px;
+               }
+               &:hover:after{
+                width: 100%;
+                // @include  hover_state_menu(normal);
                }
                &.open{
                  transform: translate(0);
@@ -94,9 +108,9 @@ header{
     .icons{
        @include  transition-ease;
       position:  absolute;
-        top: calc(90vh - 150px);
+        top: calc(90vh - 220px);
         left: 5%;
-       flex-direction: column;
+ 
        width: 15rem;
        &.open{
         top: 2rem;

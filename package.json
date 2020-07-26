@@ -21,6 +21,8 @@
   "homepage": "https://github.com/leobar37/proyecto_final#readme",
   "devDependencies": {},
   "dependencies": {
+    "animate.css": "^4.1.0",
+    "aos": "^2.3.4",
     "bootstrap": "^4.5.0",
     "slick-carousel": "^1.8.1"
   }

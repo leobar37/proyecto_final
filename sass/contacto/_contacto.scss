@@ -1,0 +1,166 @@
+header{
+    height: auto;
+}
+
+// .icons{
+//     @include  transition-ease;
+//    position:  absolute;
+//      top: calc(90vh - 150px);
+//      left: 5%;
+//     flex-direction: row;
+//     width: 15rem;
+//     &.open{
+//      top: 2rem;
+//       left:35%;
+//       span{
+//         display: none;
+//       }
+//     }
+//   }
+
+  
+  .contForm{
+    // border: 2px solid white;
+    width: 75vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    // position: relative;
+    // display: inline-block;
+    // background: white;
+    .present{
+        width: 40%;
+        height: 100%;
+         position: relative;
+        figure{
+          width: 150%;
+          position: absolute;
+          left: -15rem;
+          img{
+             width: 100%;
+          }
+        }
+        // background-color:  red;
+     }
+     .form{
+      //  position: relative;
+      // border: 2px solid white;
+      width: 100%;
+      padding: 0 3rem;   
+      //  background: black;
+      .input_group{
+           margin: 1.5rem 0;
+           width: 45%;
+           margin-right: 4rem;
+           input[type="text"] ,input[type="email"]{
+            //  position: absolute;
+            width: 100%;
+            padding: 0.8rem 0.5rem;
+             border: none;
+             border-radius: 9px;
+             border-bottom: 1px solid  $color-secondary;
+             &:focus{
+              border: none;
+              outline: none;
+              border-bottom: 1px solid   blue;
+             }
+           }
+       
+        }
+        textarea{
+          display: block;
+          margin-left: 0%;
+          min-width: 92%;
+          border: none;
+          color: black;
+          outline:  none;
+          min-height:  200px;
+        resize: none;
+        // background: rgba($color: $color-secondary, $alpha: 0.2);
+         padding: 1rem 0.5rem;
+          border-bottom: 2px solid $color-secondary;
+           border-radius: 10px;
+        }
+        button{
+          @include btn(border);
+          text-align: center;
+          padding: 0.8rem 1.5rem;
+          background-color: black;
+          color: white;
+        }
+      //  position: absolute;
+     }
+     
+  }
+
+  main{
+      height: 90vh;
+      background-color: $color-secondary;
+     display: flex;
+     flex-direction: row;
+     justify-content: center; 
+     align-items: center;
+  }
+
+  .center{
+    // margin-left: 35%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  @include media-md{
+ 
+    .contForm{
+      width: 100%;
+      .present{
+        display: none;
+      }
+    }
+
+  }
+
+
+    /*---------------------------iconst --------------------------*/
+  
+ main .icons{
+  //  border: 2px solid white;
+  //  display: flex;
+  //  flex-direction: row ;
+  position: absolute;
+    top: 86vh;
+    left: 10%;
+    z-index: 5;
+   a{
+   i{
+     font-size: 40px;
+   }
+        span{
+          display: none;
+          // transform:  translateX(-px);
+          
+        }
+
+      }
+     
+  }
+@keyframes  icons{
+ from{
+     display: block;
+     transform:  translateX(-500px);
+ }
+ to{
+   transform: translateY(500px);
+ }
+}
+
+  /*---------------------------end icons ----------------------*/ 
+
+
+  /*---------------------------titlet --------------------------*/
+
+  header .menu .title{
+    @extend %title;
+    color: white;
+    margin-top: 1rem;
+  }
+/*---------------------------end title ----------------------*/ 

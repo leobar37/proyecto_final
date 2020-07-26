@@ -17,7 +17,11 @@
    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:ital@0;1&family=Roboto:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
    <!-- font awesome -->
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
-</head>
+   <!-- animate css -->
+   <link rel="stylesheet" href="libs/animate/animate.min.css" >
+    <!-- aos -->
+    <link rel="stylesheet" href="libs/aos/aos.css">
+  </head>
 <body>
    <!-----------------------header----------------  -->
      <header class=""> 
@@ -31,7 +35,7 @@
           </div>       
         <!-- -----------------------// end burguer botn  //---------------------- -->
         
-         <nav class="menu">
+         <nav class="menu animate__animated animate__bounceInLeft  ">
               <div class="container">
                   <div class="row">
                     <ul class="col-sm-12 col-md-8 d-flex justify-content-start">
@@ -41,10 +45,10 @@
                         <a href="nosotros.html" class="menu__link">
                             Sobre nosotros
                         </a>
-                        <a href="#!" class="menu__link">
+                        <a href="portafolio.html" class="menu__link">
                             portafolio
                         </a>
-                        <a href="#!" class="menu__link">
+                        <a href="contacto.html" class="menu__link">
                             contacto
                         </a>
                    </ul>
@@ -53,7 +57,7 @@
           </nav>
           <!-- -----------------------text center  -->
        <div class="container">
-          <div class="text">
+          <div class="text animate__animated animate__bounceInDown  animate__delay-1s">
              <h1 class="text__heading">innnovaDesign</h1>
              <h3 class="text__mute">Empresa de desaroollo web</h3>
              <button class="btn btn_contact">
@@ -66,7 +70,7 @@
           <!-- -----------------------// end text center  //---------------------- -->
  
             <!-- -----------------------// icons  //---------------------- -->     
-            <address class="icons">
+            <address class="icons animate__animated animate__backInLeft">
                 <a><i class="fab fa-facebook"></i><span>@innnovaDesign</span></a>
                 <a><i class="fab fa-instagram"></i><span>@designBlog</span></a>
                 <a><i class="fab fa-twitter"></i><span>@designWeb</span></a>
@@ -74,7 +78,7 @@
             </address>
               <!-- -----------------------// end icons  //---------------------- -->
           <!-- -----------------------// arrow down double  //---------------------- -->
-            <div class="row__down">
+            <div class="row__down animate__animated animate__backInDown">
                 <a href="#!">
                     <i class="fas fa-angle-double-down"></i>
                 </a>
@@ -97,7 +101,7 @@
         
          <section class="one container">
                <h2 class="title">Servicio de creación de paginas web</h2>
-              <p>
+              <p data-aos="fade-right">
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy voluptua.
                 At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
                 no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet
@@ -105,7 +109,7 @@
                 no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet
               </p>
               <div class="cards">
-                <div class="card">
+                <div class="card" data-aos="fade-up-right">
                    <i class="fas fa-bolt"></i>
                    <h2>Rapido</h2>
                    <p>
@@ -114,7 +118,7 @@
                     Lorem ipsum dolor sit amet.
                    </p>
                 </div>
-                <div class="card">
+                <div class="card" data-aos="zoom-in-up">
                    <i class="fas fa-bolt"></i>
                    <h2>Rapido</h2>
                    <p>
@@ -123,7 +127,7 @@
                     Lorem ipsum dolor sit amet.
                    </p>
                 </div>
-                <div class="card">
+                <div class="card" data-aos="fade-left">
                    <i class="fas fa-bolt"></i>
                    <h2>Rapido</h2>
                    <p>
@@ -142,10 +146,10 @@
             <div class="container">
               <h2>Servicios</h2>
               <article class="row service">
-                   <div class="col-sm-12 col-md-5">
+                   <div class="col-sm-12 col-md-5" data-aos="zoom-in-down">
                       <img src="asssets/svgs/tienda_virtual.svg" alt="">
                    </div>
-                    <div class="col-sm-12 col-md-6 content">
+                    <div class="col-sm-12 col-md-6 content" data-aos="zoom-in-left">
                        <h2>Desarrolo de tiendas virtuales</h2>
                        <p>
                         .Con nosotros tendrás E-Commerce que más allá de ser un canal de venta digital,
@@ -158,7 +162,7 @@
                     <!-- -----------------------// options in cards  //---------------------- -->
                     <h3>¿Por que tener una tienda virtual?</h3>
                    <article class="card_options">
-                    <div class="option">
+                    <div class="option"  data-aos="zoom-out-right">
                       <span class="round">
                          <b>1</b>
                       </span>                       
@@ -171,7 +175,7 @@
                            disponibilidad
                         </span>
                      </div>
-                    <div class="option">
+                    <div class="option" data-aos="zoom-out-left">
                       <span class="round">
                          <b>1</b>
                       </span>                       
@@ -184,7 +188,7 @@
                            disponibilidad
                         </span>
                      </div>
-                    <div class="option">
+                    <div class="option" data-aos="zoom-out-right">
                       <span class="round">
                          <b>1</b>
                       </span>                       
@@ -197,7 +201,7 @@
                            disponibilidad
                         </span>
                      </div>
-                    <div class="option">
+                    <div class="option" data-aos="zoom-out-left">
                       <span class="round">
                          <b>1</b>
                       </span>                       
@@ -215,10 +219,10 @@
                     <!-- -----------------------// end options in cards  //---------------------- -->
                      <!-- -----------------------// portafolis  //---------------------- -->
                   <div class="row portafolio">
-                    <div class="col-sm-12 col-md-5">
+                    <div class="col-sm-12 col-md-5" data-aos="zoom-in-down">
                       <img class="exception" src="asssets/svgs/portafolio.svg" alt="">
                    </div>
-                    <div class="col-sm-12 col-md-6 content">
+                    <div class="col-sm-12 col-md-6 content" data-aos="zoom-in-left">
                        <h2>portafolios web</h2>
                        <p>
                         Un portafolio digital se refiere a una recopilación de documentos que pueden mostrar
@@ -237,13 +241,17 @@
             </div>
                <!-- -----------------------// options portafolio  //---------------------- -->
                <div class="conte_portafolio">
-                 <h2 class="title">¿Por qué es importante incluir un portfolio en tu perfil?</h2>
+                 <h2 class="title"
+                 data-aos="fade-right"
+                 data-aos-offset="100"
+                 data-aos-easing="ease-in-sine"
+                 >¿Por qué es importante incluir un portfolio en tu perfil?</h2>
                 <!-- <img src="asssets/img/BG-PORTAFOLIO.jpg" alt=""> -->
                 <div class="img">
                 </div>
                  <div class="elipse"></div>
                  <div class="portafolio__cards">
-                   <div class="card">
+                   <div class="card" data-aos="fade-right" >
                        <h2> 
                         Respalda tu experiencia 
                        </h2>
@@ -255,7 +263,7 @@
                            una referencia clave antes de tomar su decisión final.
                           </p>
                    </div>
-                   <div class="card">
+                   <div class="card" data-aos="fade-left">
                        <h2> 
                         Respalda tu experiencia 
                        </h2>
@@ -286,13 +294,13 @@
                  <div class="row portafolio service">
                    <div class="container">
                     <div class="col-sm-12 col-md-6 content">
-                      <h2>Landing page</h2>
-                      <p>
+                      <h2 data-aos="flip-left">Landing page</h2>
+                      <p data-aos="fade-right">
                        Una landing page, o página de aterrizaje, es una página independiente
                         (podría decirse que una página huérfana) distinta a la página de inicio 
                         o cualquier otro sitio web que podrías poseer.
                       </p>
-                      <p>
+                      <p data-aos="fade-left">
                        Esta página de aterrizaje no sólo da a conocer tu marca, 
                        producto o servicio, sino que da pasos más allá para
                         mostrarle al usuario exactamente lo que está buscando 
@@ -303,7 +311,7 @@
                       </button>
                    </div>
                    <div class="">
-                     <img src="asssets/svgs/landing_page.svg"  alt="">
+                     <img  data-aos="fade-left" src="asssets/svgs/landing_page.svg"  alt="">
                   </div>
                    </div>
                 </div>
@@ -316,10 +324,10 @@
 
           <!-- -----------------------// tecnologias  //---------------------- -->
            <div class="row w-100">
-              <div class="col-sm-12 col-md-4 title">
+              <div class="col-sm-12 col-md-4 title" data-aos="zoom-in">
                    <h2>tecnologias</h2>
               </div>
-              <div class="col-sm-12 col-md-6 frontend ">
+              <div class="col-sm-12 col-md-6 frontend " data-aos="zoom-in">
                 <h2>frontend</h2>
                  <div class="d-flex w-100  flex-wrap justify-content-center">
                     <div class="item">
@@ -333,13 +341,13 @@
                     
                  </div>
               </div>
-              <div class="col-sm-12 col-md-4 almacenamiento">
+              <div class="col-sm-12 col-md-4 almacenamiento" data-aos="zoom-in">
                    <h2>almacenamiento</h2>
                    <img src="asssets/svgs/postgresql.svg" alt="">
                    <p>Postgresql</p>
 
               </div>
-              <div class="col-sm-12 col-md-6 backend">
+              <div class="col-sm-12 col-md-6 backend" data-aos="zoom-in">
                 <h2>backend</h2>
                 <div class="d-flex w-100  flex-wrap justify-content-center align-content-center">
                   <div class="item">
@@ -399,7 +407,7 @@
 </div>
 </footer>
  <!-- -----------------------// end footer  //---------------------- -->
-
+  <script src="libs/aos/aos.js"></script>
  <script src="js/main.js"></script>
 </body>
 </html>
