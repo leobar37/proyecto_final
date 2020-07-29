@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    console.log("hola soy jquery");
+
     $('.center').slick({
         centerMode: true,
         centerPadding: '50px',
@@ -10,8 +10,8 @@ $(document).ready(function () {
             settings: {
               arrows: true,
               centerMode: true,
-              centerPadding: '40px',
-              slidesToShow: 2
+              centerPadding: '20px',
+              slidesToShow: 1
             }
           },
           {

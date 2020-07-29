@@ -1,5 +1,11 @@
 
 @include media-md{
+     header{
+       height: 100vh;
+       .waves{
+           bottom: -3rem;
+       }
+     }
     .menu{
        visibility: hidden ;
        ul a{
@@ -30,6 +36,6 @@
          display: none;
         
      }}
-    
+
     
 }

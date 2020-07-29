@@ -48,10 +48,27 @@
              transform: scale(1.1);
            }
             
-        }
+           @include media-sm{
+               position: absolute;
+            //    transform: translateX(-20rem);
+            //   border: 2px solid white;
+              top: 300px !important;
+           }
 
+        } 
+       
    
     }
+    @include media-md{
+        width: 80%;
+        .card{
+            width: 100%;
+            .content{
+                width: 100%;
+            }
+        }
+    }
+
 }
 
 

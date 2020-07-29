@@ -285,6 +285,13 @@ header .waves {
 
 /*---------------------------end  items delay ----------------------*/
 @media screen and (max-width: 768px) {
+  header {
+    height: 100vh;
+  }
+  header .waves {
+    bottom: -3rem;
+  }
+
   .menu {
     visibility: hidden;
   }
@@ -338,10 +345,9 @@ header .waves {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
-  grid-template-columns: repeat(1fr, 3);
 }
 .one .card {
-  width: 25%;
+  width: 80%;
   text-align: center;
   margin: 0.2rem 1rem;
   box-shadow: 7px 19px 33px -9px rgba(0, 0, 0, 0.44);
@@ -355,6 +361,15 @@ header .waves {
 .one .card:hover {
   transform: scale(1.1);
 }
+@media screen and (max-width: 768px) {
+  .one .cards {
+    flex-wrap: wrap;
+  }
+  .one .cards .card {
+    width: 60%;
+    margin-bottom: 1rem;
+  }
+}
 
 .servicios {
   margin-top: 5rem;
@@ -365,6 +380,10 @@ header .waves {
 }
 .servicios h2 {
   text-align: center;
+}
+.servicios .service {
+  /*---------------------------media queriest--------------------------*/
+  /*---------------------------end media queries ----------------------*/
 }
 .servicios .service div > img {
   width: 100%;
@@ -496,6 +515,88 @@ header .waves {
   top: 2rem;
 }
 
+@media screen and (max-width: 768px) {
+  .servicios .service {
+    width: 100%;
+  }
+  .servicios .service div > img {
+    width: 70%;
+    margin-left: 10%;
+  }
+  .servicios .service .content {
+    margin-top: 4rem;
+    padding: 0.5rem 1.5rem;
+  }
+  .servicios .service h3 {
+    margin-left: 0;
+    width: 100% !important;
+    text-align: center;
+  }
+  .servicios .service .card_options .option .badge {
+    left: 15%;
+  }
+  .servicios .service .portafolio .exception {
+    left: 0%;
+  }
+  .servicios .service .portafolio .content {
+    margin-top: 20rem;
+  }
+  .servicios .service .responsive_thumb {
+    display: none;
+  }
+  .servicios .conte_portafolio .title {
+    width: 100%;
+    margin-left: 0;
+    left: 0;
+    font-size: 1.5rem;
+  }
+  .servicios .conte_portafolio .elipse {
+    left: -10rem;
+    top: -11rem;
+    width: 150vw;
+  }
+  .servicios .conte_portafolio .img {
+    width: 100%;
+    height: 180vh;
+  }
+  .servicios .conte_portafolio .portafolio__cards {
+    width: 100%;
+    left: 0;
+    top: 30%;
+  }
+  .servicios .conte_portafolio .portafolio__cards .card {
+    width: 30%;
+    margin: 1rem 1rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .servicios .service .card_options .option {
+    width: 100%;
+  }
+  .servicios .service .card_options .option .badge {
+    left: 35%;
+  }
+
+  .conte_portafolio .title {
+    width: 100%;
+    margin-left: 0;
+    left: 0;
+    font-size: 1.1rem !important;
+  }
+
+  .portafolio__cards {
+    width: 100%;
+    left: 0;
+    top: 30%;
+  }
+  .portafolio__cards .card {
+    width: 30%;
+    margin: 1rem 1rem;
+  }
+  .portafolio__cards .card:nth-child(3) {
+    display: none;
+  }
+}
 /*---------------------------tecnologias --------------------------*/
 .tecnologias {
   margin-top: 8rem;
@@ -537,6 +638,37 @@ header .waves {
 .tecnologias .backend .item img.express {
   margin-top: 2rem;
 }
+@media screen and (max-width: 768px) {
+  .tecnologias {
+    margin-top: 0;
+    height: auto;
+  }
+  .tecnologias .title {
+    margin: 0 auto;
+    padding: 0 auto;
+  }
+}
+@media screen and (max-width: 500px) {
+  .tecnologias .row div {
+    height: 60vh;
+    text-align: center;
+  }
+  .tecnologias .row div.title {
+    height: 15vh !important;
+  }
+  .tecnologias .row div.frontend {
+    height: auto;
+  }
+  .tecnologias .row div.backend {
+    height: 60vh !important;
+  }
+  .tecnologias .row div.backend .item:nth-child(1) {
+    margin-left: 8% !important;
+  }
+  .tecnologias .row div.backend .item:nth-child(2) {
+    display: none;
+  }
+}
 
 /*---------------------------end tecnologias----------------------*/
 footer {
@@ -559,6 +691,27 @@ footer .menu ul li {
 }
 footer .menu ul li a:hover {
   border-bottom: 2px solid #FFFFFF;
+}
+footer .columns {
+  justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  footer {
+    height: auto !important;
+    margin-top: 3rem;
+  }
+  footer .columns {
+    justify-content: space-between;
+    flex-direction: column !important;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  footer {
+    height: auto !important;
+    margin-top: 7rem;
+    height: auto;
+  }
 }
 
 /*---------------------------sobre nosotros --------------------------*/
@@ -616,9 +769,79 @@ footer .menu ul li a:hover {
   top: 35rem;
   left: -8rem;
 }
+@media screen and (max-width: 1024px) {
+  .sobre_nosotros .acerca_de .trazo_mision {
+    right: -18rem;
+    width: 800px;
+  }
+  .sobre_nosotros .acerca_de .mision {
+    top: 0rem;
+    width: 60%;
+  }
+  .sobre_nosotros .acerca_de .img_mision {
+    width: 50%;
+    top: 22rem;
+    left: -9rem;
+  }
+  .sobre_nosotros .acerca_de .trazo_vision {
+    width: 950px;
+    top: 38rem;
+    left: -25rem;
+  }
+  .sobre_nosotros .acerca_de .img_vision {
+    top: 35rem;
+    right: -8rem;
+  }
+  .sobre_nosotros .acerca_de .vision {
+    top: 44rem;
+    right: 140rem;
+    width: 60%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sobre_nosotros .acerca_de .trazo_mision {
+    width: 100vw;
+    right: -10rem;
+  }
+  .sobre_nosotros .acerca_de .mision {
+    top: -2rem !important;
+    width: 80%;
+  }
+  .sobre_nosotros .acerca_de .mision p {
+    width: 100%;
+    font-size: 0.8rem;
+  }
+  .sobre_nosotros .acerca_de .img_mision, .sobre_nosotros .acerca_de .img_vision {
+    display: none;
+  }
+  .sobre_nosotros .acerca_de .vision p {
+    width: 100%;
+    font-size: 0.8rem;
+  }
+  .sobre_nosotros .acerca_de .trazo_vision {
+    width: 150vw;
+  }
+  .sobre_nosotros .acerca_de .vision {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .sobre_nosotros .acerca_de .trazo_mision, .sobre_nosotros .acerca_de .trazo_vision {
+    display: none;
+  }
+  .sobre_nosotros .acerca_de .vision, .sobre_nosotros .acerca_de .mision {
+    margin: 0 auto !important;
+    position: static;
+    color: black;
+  }
+  .sobre_nosotros .acerca_de .vision h1, .sobre_nosotros .acerca_de .mision h1 {
+    padding: 0 2px;
+  }
+}
 .sobre_nosotros .valores {
   position: relative;
   margin-top: 5rem;
+  margin-bottom: 15rem;
   height: 80vh;
 }
 .sobre_nosotros .valores figure {
@@ -659,6 +882,51 @@ footer .menu ul li a:hover {
 }
 .sobre_nosotros .valores .circle.down {
   top: 35rem;
+}
+@media screen and (max-width: 1024px) {
+  .sobre_nosotros .valores {
+    margin-top: 10rem;
+  }
+  .sobre_nosotros .valores .circle.one {
+    top: -10rem;
+    left: 0;
+  }
+  .sobre_nosotros .valores .circle.one.down {
+    top: 25rem;
+  }
+  .sobre_nosotros .valores .circle.two {
+    top: 0;
+    left: 32%;
+  }
+  .sobre_nosotros .valores .circle.three {
+    left: 65%;
+  }
+  .sobre_nosotros .valores .circle.down {
+    top: 35rem;
+  }
+  .sobre_nosotros .valores figure {
+    left: 15%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .sobre_nosotros .valores .valores {
+    margin-top: 0;
+  }
+  .sobre_nosotros .valores .circle {
+    width: 100%;
+    border-radius: 0;
+    height: 100px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin: 1rem 0;
+    position: static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .sobre_nosotros .valores figure {
+    display: none;
+  }
 }
 .sobre_nosotros h1 {
   margin-top: 10rem;
@@ -713,6 +981,23 @@ footer .menu ul li a:hover {
 .sobre_nosotros .galeria .card .content .icons a:hover {
   transform: scale(1.1);
 }
+@media screen and (max-width: 500px) {
+  .sobre_nosotros .galeria .card .content .icons {
+    position: absolute;
+    top: 300px !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sobre_nosotros .galeria {
+    width: 80%;
+  }
+  .sobre_nosotros .galeria .card {
+    width: 100%;
+  }
+  .sobre_nosotros .galeria .card .content {
+    width: 100%;
+  }
+}
 
 .folio header {
   background-image: linear-gradient(90deg, #064242, rgba(0, 32, 36, 0.7)), url("../asssets/img/bg_portafolio.png");
@@ -739,6 +1024,14 @@ footer .menu ul li a:hover {
 .folio header .text .btn_contact {
   margin-top: 1rem;
   margin-left: 6%;
+}
+@media screen and (max-width: 1024px) {
+  .folio header .text {
+    margin-left: 10% !important;
+  }
+  .folio header .text .btn_contact {
+    margin-left: 33%;
+  }
 }
 .folio .portafolio {
   /*---------------------------paginatet --------------------------*/
@@ -849,8 +1142,9 @@ footer .menu ul li a:hover {
 }
 .folio .portafolio .sen_resenia textarea {
   margin-left: 22%;
-  min-width: 800px;
-  min-height: 300px;
+  min-width: 200px;
+  height: 20vh;
+  width: 800px;
   outline: none;
   resize: none;
   overflow: auto;
@@ -868,6 +1162,15 @@ footer .menu ul li a:hover {
   margin-left: 46%;
   background-color: black;
   color: white;
+}
+@media screen and (max-width: 1024px) {
+  .folio .portafolio .sen_resenia {
+    min-width: 300px !important;
+  }
+  .folio .portafolio .sen_resenia textarea {
+    width: 600px;
+    height: 50vh;
+  }
 }
 .folio footer {
   margin-top: 0;
@@ -999,6 +1302,7 @@ body {
   font-size: 18px;
   font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 html {

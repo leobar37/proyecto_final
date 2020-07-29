@@ -29,4 +29,14 @@ header{
             margin-left: 6%;
         }
     }
+    @include media-lg{
+      .text{
+        //   border: 2px solid white;
+          margin-left: 10% !important;
+        //   text-align: center;
+      .btn_contact{
+          margin-left: 33%;
+      }  
+    }
+    }
 }

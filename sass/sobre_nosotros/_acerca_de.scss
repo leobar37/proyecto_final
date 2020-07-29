@@ -16,9 +16,6 @@
     position: relative;
     height: 120vh;
     width: 100%;
-    // border: 2px solid black;
-    // overflow-x: hidden;
- 
     article{
         position: absolute;
         color: $color-white;
@@ -34,7 +31,7 @@
    .img_mision{
        width: 45%;
        left: -12rem;
-   }
+   } 
    .img_vision{
        width: 50%;
        bottom: -25rem;
@@ -49,9 +46,6 @@
        left: -30rem;
        bottom: -30rem;
    }
-
-
-
    .mision{
      
         top: 6rem;
@@ -60,6 +54,78 @@
    .vision{
     top: 35rem;
     left: -8rem;
+   }
+      @include media-lg{
+         .trazo_mision{
+             right: -18rem;;
+             width: 800px;
+         }
+         .mision{
+             top: 0rem;
+             width: 60%;
+         }
+         .img_mision{
+             width: 50%;
+             top: 22rem;
+             left: -9rem;
+         }
+         .trazo_vision{
+             width: 950px;
+             top: 38rem;
+             left: -25rem;
+         }
+          .img_vision{
+              top: 35rem;
+              right: -8rem;
+          }
+         .vision{
+             top: 44rem;
+             right: 140rem;
+             width: 60%;
+         }
+         
+      }
+      @include media-md{
+           .trazo_mision{
+               width: 100vw;
+               right: -10rem;
+           }
+           .mision{
+               top:-2rem !important;
+               width: 80%;
+             p{
+                 width: 100%;
+                font-size: 0.8rem;
+             }
+           }
+          .img_mision , .img_vision{
+             display: none;
+          }
+          .vision{
+            p{
+                width: 100%;
+               font-size: 0.8rem;
+            }  
+          }
+          .trazo_vision{
+              width: 150vw;
+          }
+          .vision{
+              width: 80%;
+          }
+      }
+      @include media-sm{
+      .trazo_mision, .trazo_vision{
+          display: none;
+      }
+      .vision , .mision{
+          margin: 0 auto !important;
+          position: static;
+          color: black;
+          h1{
+              padding: 0  2px;
+          }
+      }
    }
 }
 

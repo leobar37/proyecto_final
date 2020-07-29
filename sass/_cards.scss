@@ -4,7 +4,7 @@
       padding:  1rem 0.2rem;
       font-size: 6rem;
    }
-     width: 25%;
+      width: 80%;
       text-align: center; 
       margin: 0.2rem 1rem;
       box-shadow:  $shadow-card;
@@ -13,6 +13,8 @@
       &:hover{
      transform: scale(1.1);
    }
+
+  
 }
 
 .one{
@@ -35,9 +37,21 @@
         flex-wrap: nowrap;
         justify-content: center;
       //   border:  2px solid black;
-        grid-template-columns: repeat(1fr , 3);
+      //   grid-template-columns: repeat(1fr , 3);
      }
      .card{
         @include card;
+   
      }
+
+     @include media-md{
+        .cards{
+           flex-wrap: wrap;
+           .card{
+            width: 60%;
+            margin-bottom: 1rem;
+             }
+      }
+    //   color: blue;
+    }
 }

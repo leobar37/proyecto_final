@@ -21,6 +21,8 @@
    <link rel="stylesheet" href="libs/animate/animate.min.css" >
     <!-- aos -->
     <link rel="stylesheet" href="libs/aos/aos.css">
+    <!-- owl carrousel -->
+    <link rel="stylesheet" href="libs/carrousel/owl.carousel.min.css">
   </head>
 <body>
    <!-----------------------header----------------  -->
@@ -108,7 +110,7 @@
                 At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
                 no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet
               </p>
-              <div class="cards">
+              <div class="cards owl-carousel owl-theme">
                 <div class="card" data-aos="fade-up-right">
                    <i class="fas fa-bolt"></i>
                    <h2>Rapido</h2>
@@ -311,7 +313,7 @@
                       </button>
                    </div>
                    <div class="">
-                     <img  data-aos="fade-left" src="asssets/svgs/landing_page.svg"  alt="">
+                     <img class="responsive_thumb"  data-aos="fade-left" src="asssets/svgs/landing_page.svg"  alt="">
                   </div>
                    </div>
                 </div>
@@ -349,7 +351,7 @@
               </div>
               <div class="col-sm-12 col-md-6 backend" data-aos="zoom-in">
                 <h2>backend</h2>
-                <div class="d-flex w-100  flex-wrap justify-content-center align-content-center">
+                <div class="d-flex w-100  flex-sm-column  flex-wrap justify-content-center align-content-center">
                   <div class="item">
                     <img src="asssets/img/node_js.png" alt="">
                     <!-- <p>Angular</p> -->
@@ -365,13 +367,13 @@
        
           <!-- -----------------------// end tecnologias  //---------------------- -->
  
-      </section>  
+        </section>  
       </div>    
  </main>
  <!-- -----------------------// footer  //---------------------- -->
  <footer>
    <div class="container">
-     <div class="columns d-flex flex-row justify-content-between">
+     <div class="columns d-flex">
       <div class="">
         <h1>innnovaDesign</h1>
         <h6>Empresa de desarrollo web</h6>
@@ -406,6 +408,33 @@
      </div>
 </div>
 </footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- carrousel -->
+<script src="libs/carrousel/owl.carousel.min.js"></script>
+
+<script>
+  const responsive =  {
+   0 : {
+      items  : 1
+   },
+    320 : { 
+     items  : 1
+   },
+   520 : { 
+     items  : 1
+   },
+   960 : { 
+    items : 3
+   }
+ }
+
+   $(document).ready(function(){
+  $('.owl-carousel').owlCarousel({
+    responsive : responsive
+  });
+});
+</script>
  <!-- -----------------------// end footer  //---------------------- -->
   <script src="libs/aos/aos.js"></script>
  <script src="js/main.js"></script>

@@ -1,7 +1,7 @@
 .valores{
     position: relative;
     margin-top: 5rem;
-    // border: 2px solid black;
+    margin-bottom: 15rem;
     height: 80vh;
   figure{
       position: absolute;
@@ -43,7 +43,57 @@
          top: 35rem;
      }
   }   
+  @include media-lg{
+    margin-top: 10rem;   
+    .circle{
+        &.one{
+            top: -10rem;
+             left: 0;
+             &.down{
+                 top: 25rem;
+             }
+        }
+         &.two{
+             top: 0;
+            left: 32%;
+         }
+         &.three{
+          left: 65%;
+         }
+         &.down{
+             top: 35rem;
+         }   
+       }
+       figure{
+           left: 15%;
+       }
+       
+  }
 
+  @include media-sm{
+     .valores{
+        //  border: 2px solid black;
+        margin-top: 0;
+     }
+      .circle{
+        width: 100%;
+        border-radius: 0;
+        height: 100px;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin: 1rem 0;
+        position: static;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+       }
+       figure{
+        //    left: 15%;
+        display: none;
+       }
+     
+       
+  }
 }
 h1{
     margin-top: 10rem;

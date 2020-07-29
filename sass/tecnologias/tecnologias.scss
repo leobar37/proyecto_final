@@ -62,8 +62,43 @@
             // margin: 0 1re1m;
     }
    }
-  
+   @include media-md {
+      margin-top: 0;
+      height: auto;
+      // border: 2px solid black;
+      .title{
+        margin:  0  auto;
+        padding:  0 auto;
+      }
 
+   }
+   @include media-sm{
+    .row  div{
+      // border: 2px solid black;
+
+      height: 60vh;
+      text-align: center;
+      &.title{
+        height: 15vh !important;
+      }
+      &.frontend{
+        height: auto;
+  
+      }
+      &.backend{
+        height: 60vh !important;
+           .item:nth-child(1){
+             margin-left: 8% !important;
+
+           }
+         .item:nth-child(2){
+           display: none;
+         }
+       }
+      }
+  }
 }
+
+ 
 
    /*---------------------------end tecnologias----------------------*/

@@ -24,4 +24,24 @@ footer{
             }
         }
      }
+     .columns{
+         justify-content: space-between;
+
+     }
+     @include media-md {
+         height:  auto!important;
+         margin-top: 3rem;
+     .columns{
+         justify-content: space-between;
+         flex-direction: column !important;
+         align-items: center;
+     }
+     }
+     @include media-sm{
+        //  color: black;
+         height: auto !important;
+    
+         margin-top: 7rem;
+         height: auto;
+     }
 }

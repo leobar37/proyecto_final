@@ -1,164 +1,278 @@
-.servicios{
-    margin-top: 5rem;
-     h2{
-         @extend  %title;
-         text-align: center;
-     } 
-       
-     .service{
-         div >  img{
-             width: 100%;
-         }
+.servicios {
+  margin-top: 5rem;
+  h2 {
+    @extend %title;
+    text-align: center;
+  }
 
-         .content{
-              h2{
-                  @extend %title_second;
-                  text-align: left;
-                  text-transform: uppercase;
-              }
-              p{
-                  @extend  %paragraph;
-                  text-align: left;
-              }
-           
-         }
-         .portafolio{
-             padding-top : 6rem;
-         }
-     }
-        /*---------------------------options of virtual store --------------------------*/
-        h3{
-            @extend %title_second;
-            margin-left: 35%;
-            padding: 1.5rem 0.5rem;
-        }   
-        .card_options{
-             width: 100%;
-              display: flex;
-              flex-direction: row;
-              justify-content: space-around;
-              flex-wrap: wrap;
-               
-           }  
-          .option{
-              margin: 1rem 1.5rem;
-              position: relative;
-              $round-size : 50px;
-                width:  25vw;
-                 background: $color-secondary;
-                 p{
-                     padding: 1.2rem 0.9rem;
-                    @extend %paragraph;
-                    color: white;
-                    text-align: center;
-                    font-style: italic;
-                 }
-                 .round{
-                     position: absolute;
-                     text-align: center;
-                       right: -1.5rem;
-                       top: -1.5rem;
-                     width:  $round-size;
-                      height:  $round-size;
-                         border-radius: 50px;
-                       
-                     background:  $color-primary;
-                     b{
-                         color: white;
-                         display: block;
-                          padding-top: 28%;
-                     }
-                   
-                 }
-                 .badge{
-                     position: absolute;
-                     background:  $color-primary;
-                     padding: 0.6rem 0.5rem;
-                     border-radius: 8px;
-                     bottom: -1rem;
-                     left: 30%;
-                     font-size: 1rem;
-
-                 }
-            }
-
-
-      /*---------------------------end options of virtual store----------------------*/ 
-     /*---------------------------bg portafoliot --------------------------*/
-    .conte_portafolio{
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-        height: 120vh;
-        .img{
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 110vh;
-            position: absolute;
-            background-image:  linear-gradient(180deg,rgba(6, 66, 66, 0), rgba(0, 32, 36, 1) ) ,
-            url('../asssets/img/BG-PORTAFOLIO.jpg');
-        }
-        .elipse{
-            top: -12rem;
-            left: -12rem;
-            position: absolute;
-            width:  120vw;
-            height: 400px;
-            border-radius: 50%;
-            background-color: white;
-        }
-        .title{
-            position: absolute;
-            top: 6rem;
-            z-index: 50;
-            font-family: $font-lato;
-            font-style: italic;
-            left: 24%;
-            color: black;
-        }
-        .portafolio__cards{
-            position: absolute;
-            // border: 2px solid blue;
-            width: 70%;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-            top: 35%;
-            left: 15%;
-            .card{
-                width: 30%;
-                color: white;
-                margin: 1.2rem 10%;
-                h2{
-                    @extend %title;
-                   text-align: left;
-                   font-size: 1rem;
-                }
-                p{
-                    @extend %paragraph;
-                    font-style: italic;
-                    font-size: 0.8rem;
-                }
-            }
-        }   
+  .service {
+    div > img {
+      width: 100%;
     }
 
-    .portafolio{
-        position: relative;
-        div img{
-           width: 50%;
-           top: -2rem;
-           left: 35%;
-         position: absolute;;
-          &.exception{
-              width: 80%;
-              left: 18%;
-              top: 2rem;
+    .content {
+      h2 {
+        @extend %title_second;
+        text-align: left;
+        text-transform: uppercase;
+      }
+      p {
+        @extend %paragraph;
+        text-align: left;
+      }
+    }
+    .portafolio {
+      padding-top: 6rem;
+    }
+    /*---------------------------media queriest--------------------------*/
+
+    /*---------------------------end media queries ----------------------*/
+  }
+  /*---------------------------options of virtual store --------------------------*/
+  h3 {
+    @extend %title_second;
+    margin-left: 35%;
+    padding: 1.5rem 0.5rem;
+  }
+  .card_options {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .option {
+    margin: 1rem 1.5rem;
+    position: relative;
+    $round-size: 50px;
+    width: 25vw;
+    background: $color-secondary;
+    p {
+      padding: 1.2rem 0.9rem;
+      @extend %paragraph;
+      color: white;
+      text-align: center;
+      font-style: italic;
+    }
+    .round {
+      position: absolute;
+      text-align: center;
+      right: -1.5rem;
+      top: -1.5rem;
+      width: $round-size;
+      height: $round-size;
+      border-radius: 50px;
+
+      background: $color-primary;
+      b {
+        color: white;
+        display: block;
+        padding-top: 28%;
+      }
+    }
+    .badge {
+      position: absolute;
+      background: $color-primary;
+      padding: 0.6rem 0.5rem;
+      border-radius: 8px;
+      bottom: -1rem;
+      left: 30%;
+      font-size: 1rem;
+    }
+  }
+
+  /*---------------------------end options of virtual store----------------------*/
+  /*---------------------------bg portafoliot --------------------------*/
+  .conte_portafolio {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 120vh;
+    .img {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 110vh;
+      position: absolute;
+      background-image: linear-gradient(
+          180deg,
+          rgba(6, 66, 66, 0),
+          rgba(0, 32, 36, 1)
+        ),
+        url("../asssets/img/BG-PORTAFOLIO.jpg");
+    }
+    .elipse {
+      top: -12rem;
+      left: -12rem;
+      position: absolute;
+      width: 120vw;
+      height: 400px;
+      border-radius: 50%;
+      background-color: white;
+    }
+    .title {
+      position: absolute;
+      top: 6rem;
+      z-index: 50;
+      font-family: $font-lato;
+      font-style: italic;
+      left: 24%;
+      color: black;
+    }
+    .portafolio__cards {
+      position: absolute;
+      // border: 2px solid blue;
+      width: 70%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      top: 35%;
+      left: 15%;
+      .card {
+        width: 30%;
+        color: white;
+        margin: 1.2rem 10%;
+        h2 {
+          @extend %title;
+          text-align: left;
+          font-size: 1rem;
+        }
+        p {
+          @extend %paragraph;
+          font-style: italic;
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+
+  .portafolio {
+    position: relative;
+    div img {
+      width: 50%;
+      top: -2rem;
+      left: 35%;
+      position: absolute;
+      &.exception {
+        width: 80%;
+        left: 18%;
+        top: 2rem;
+      }
+    }
+  }
+  /*---------------------------end bg portafolio ----------------------*/
+}
+
+
+
+
+@include media-md {
+  .servicios {
+    .service {
+      width: 100%;
+      div > img {
+        width: 70%;
+        margin-left: 10%;
+      }
+      .content {
+        margin-top: 4rem;
+        padding: 0.5rem 1.5rem;
+      }
+      h3{
+        margin-left: 0;
+        width: 100% !important;
+        text-align: center;
+      }
+      .card_options{
+        .option{
+          .badge{
+            left: 15%;
+          }
+        }
+      }
+
+      .portafolio{
+        .exception{
+          left: 0%;
+        }
+        .content{
+          margin-top: 20rem;
+        }
+      }
+      .responsive_thumb{
+        display: none;
+        // width: 100%;
+        // left: 0;
+        // margin-top: 25rem;
+      }
+
+    }
+    .conte_portafolio{
+         
+        .title{
+          width: 100%;
+          margin-left: 0;
+          left: 0;
+           font-size: 1.5rem;
+        }
+        .elipse{
+          left: -10rem;
+          top: -11rem;
+          width: 150vw;
+        }
+        .img{
+          // display: none;
+          width: 100%;
+          // left: 10%;
+           height: 180vh;
+        }
+        .portafolio__cards{
+          width: 100%;
+          // border: 2px solid red;
+          left: 0;
+          top: 30%;
+          .card{
+            width: 30%;
+            margin: 1rem 1rem;
           }
         }
     }
-   /*---------------------------end bg portafolio ----------------------*/
-     
+
+  }
+}
+
+@include media-sm{
+  .servicios{
+   .service{
+    .card_options{
+      .option{
+        width: 100%;
+        .badge{
+          left: 35%;
+        }
+      }
+    }
+   }
+  }
+
+  .conte_portafolio .title{
+    width: 100%;
+    margin-left: 0;
+    left: 0;
+     font-size: 1.1rem !important;
+  }
+  .portafolio__cards{
+    width: 100%;
+    // border: 2px solid red;
+    left: 0;
+    top: 30%;
+    .card{
+      width: 30%;   
+      margin: 1rem 1rem;
+    }
+    & .card:nth-child(3){
+      display: none;
+    }
+  }
 }
