@@ -1,6 +1,4 @@
 let elements  = document.querySelectorAll('main .icons a');
-
-console.log(elements);
 elements.forEach( icon => {
     // console.log("estoy encima");
  icon.addEventListener('onmouseover' , ()=>{
@@ -9,4 +7,3 @@ elements.forEach( icon => {
 
 })
 
-console.log("suxxes");

@@ -9,23 +9,18 @@ const row = document.querySelector('.row__down a');
 const header = document.querySelector('header');
 row.addEventListener('click' , ()=>{
   let top = header.getBoundingClientRect().height;
-  console.log(top);
+
    window.scroll(
     { top : top + 200}
    );
 })
-
-
-
 
 menuBtn.addEventListener('click' ,()=>{
     nav.classList.toggle('open');
     hamburger.classList.toggle('open');
     icons.classList.toggle('open');
     rowDown.classList.toggle('open');
-   itemsNav.forEach(item => item.classList.toggle('open'));
-
-
+    itemsNav.forEach(item => item.classList.toggle('open'));
 });
 
 

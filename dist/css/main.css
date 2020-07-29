@@ -1025,12 +1025,49 @@ footer .columns {
   margin-top: 1rem;
   margin-left: 6%;
 }
+.folio header .icons.open {
+  top: 10rem !important;
+  left: 40%;
+}
+.folio header .icons.open span {
+  display: none;
+}
 @media screen and (max-width: 1024px) {
   .folio header .text {
-    margin-left: 10% !important;
+    margin-left: 10%;
   }
   .folio header .text .btn_contact {
     margin-left: 33%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .folio header h2.title {
+    color: white;
+    text-align: center;
+  }
+  .folio header .text {
+    transform: translateY(-10rem);
+    margin-top: 0rem;
+    margin-left: 0;
+    margin-top: 10rem;
+  }
+  .folio header .text .btn_contact {
+    margin-left: 0;
+  }
+  .folio header .waves {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .folio header .text {
+    margin: 0 auto;
+    display: block !important;
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+  .folio header .text p {
+    width: 100%;
   }
 }
 .folio .portafolio {
@@ -1044,6 +1081,11 @@ footer .columns {
 .folio .portafolio h1 {
   width: 100%;
   text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .folio .portafolio h1 {
+    margin-top: 5rem;
+  }
 }
 .folio .portafolio .job {
   margin-top: 10rem;
@@ -1095,6 +1137,28 @@ footer .columns {
 .folio .portafolio .job .bg_image .text .btn_contact:hover {
   transform: scale(1.1);
 }
+@media screen and (max-width: 768px) {
+  .folio .portafolio .job .phrase {
+    margin-top: 0;
+  }
+  .folio .portafolio .job .phrase p {
+    text-align: center;
+    position: static;
+  }
+  .folio .portafolio .job .bg_image {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: static;
+  }
+  .folio .portafolio .job .bg_image .text {
+    position: static;
+    width: 100%;
+    transform: translateY(-10rem);
+  }
+}
 .folio .portafolio .paginate {
   text-align: center;
   margin-top: 10rem;
@@ -1141,10 +1205,10 @@ footer .columns {
   text-align: center;
 }
 .folio .portafolio .sen_resenia textarea {
-  margin-left: 22%;
+  margin-left: 25%;
   min-width: 200px;
   height: 20vh;
-  width: 800px;
+  width: 50%;
   outline: none;
   resize: none;
   overflow: auto;
@@ -1165,11 +1229,12 @@ footer .columns {
 }
 @media screen and (max-width: 1024px) {
   .folio .portafolio .sen_resenia {
-    min-width: 300px !important;
+    height: auto;
+    padding-bottom: 5rem;
   }
   .folio .portafolio .sen_resenia textarea {
-    width: 600px;
-    height: 50vh;
+    width: 80%;
+    margin-left: 10%;
   }
 }
 .folio footer {
