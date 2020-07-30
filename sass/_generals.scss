@@ -24,16 +24,12 @@ ul li a{
            background: transparent;
         }
      }
-   
 }
-
-
 %icons{
     a i{
         font-size: map-get($map: $fonts-size, $key: medium) ;
     }
     a{
-        // position: relative;
      color:  $color-white;
       display: inline-block;
      margin:  0 $space-items;

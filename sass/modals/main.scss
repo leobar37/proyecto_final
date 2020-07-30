@@ -73,7 +73,7 @@ ul{
                 h3{
                      font-family: $font-sans;
                      font-weight: 300;
-                     font-size: 1rem;
+                     font-size: 0.8rem;
                  }
             }
             h4{
@@ -99,6 +99,7 @@ ul{
                   justify-content: center;
                   align-items: center;
                  flex-direction: column;
+
               a{
                 //   width: 100%;
                 margin: 1rem 1rem;
@@ -115,6 +116,7 @@ ul{
                 }
               }
             }
+          
         }
         .caja2{
             //  border: 2px solid black;
@@ -179,6 +181,18 @@ ul{
                 }
              
 
+        }
+        &.login{
+        //    width: 70%;
+           .texto2{
+               margin-top: 10rem;
+           }
+           .caja2{
+               .registrar{
+                   margin-top: 3rem;
+                   margin-left: 25%;
+               }
+           }
         }
     }
     .close-animatedModal{

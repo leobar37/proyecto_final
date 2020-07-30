@@ -202,7 +202,7 @@
 .modal .conte .caja1 .titulo h3 {
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 .modal .conte .caja1 h4 {
   margin: 2.5rem 0;
@@ -289,6 +289,13 @@
 }
 .modal .conte .caja2 li a i {
   padding: 0.5rem 0.5rem;
+}
+.modal .conte.login .texto2 {
+  margin-top: 10rem;
+}
+.modal .conte.login .caja2 .registrar {
+  margin-top: 3rem;
+  margin-left: 25%;
 }
 .modal .close-animatedModal {
   position: fixed;

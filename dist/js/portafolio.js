@@ -1,4 +1,5 @@
 
+let login =  false;
 $(document).ready(function () {
     $("#demo01").animatedModal({
         color : "#FFFFFF",
@@ -72,8 +73,8 @@ if(val){
 }else{
     noneText.textContent = "registrado correctamente";
      localStorage.setItem('name' , info);
-    arr.forEach(item =>  item.value = "");
 }
+
 
 alerta.classList.toggle('open');
 setTimeout(()=>{
@@ -81,3 +82,21 @@ setTimeout(()=>{
 
 }, 1000)
 });
+
+document.getElementById('enviar')
+.addEventListener('click' , (e)=>{
+  e.preventDefault();
+   const text = document.getElementById('textResenia');
+   if(text.value.trim().length == 0){
+    Swal.fire({
+       icon : "error",
+        title : "Debe poner al menos 10 caracteres"
+      })      
+   }else{
+       Swal.fire({
+           title: 'Su reseña ha sido enviadada',
+           text : "Gracias por ayudarnos a mejorar"
+        })
+   }
+})
+AOS.init();

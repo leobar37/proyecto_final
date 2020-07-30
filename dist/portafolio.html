@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portafolio</title>
        <!-- normalize -->
        <link rel="stylesheet" href="libs/normalize/normalize.css">
        <!-- CSS only -->
@@ -47,7 +47,7 @@
                  <div class="container">
                      <div class="row">
                        <h2 class="col-md-4 title">
-                         innovaDesign
+                         InnovaDesign
                         </h2>
                              <ul class="col-sm-12 col-md-6 d-flex justify-content-end">                           
                                   
@@ -65,7 +65,7 @@
                                  </a>
                             </ul>
                       <div class="col-md-2 user">
-                         <span>Elmer Joselo</span>
+                         <span>Alberto</span>
                          <i class="fas fa-user"></i>
                       </div>
 
@@ -116,20 +116,19 @@
          <h1>Nuestros trabajos</h1>  
         <div class="container">
           <article class="job row">
-            <div class="phrase col-md-4" class="">
+            <div class="phrase col-md-4"  data-aos="fade-right">
            <p>
-            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-            sed diam nonumy eirmod tempor invidunt ut 
-            labore et dolore "
+            "Nos adaptamos a cualquier problemática y estamos preparados para cualquier cambio brusco del mercado, y a cua"
+
            </p>
             </div>
-            <div class="bg_image col-md-8">
+            <div class="bg_image col-md-8"  data-aos="fade-left">
                <div class="text">
                      <h2>THE FUTURE</h2>
                      <p>
-                         Lorem ipsum dolor sit amet, consetetur sadipscing 
-                         elitr, sed diam nonumy eirmod tempor invidunt ut
-                          labore et 
+                      El futuro de la web se abre ampliamente ante nosotros, 
+                      pero podemos hacer algunas predicciones basadas en la tecnología 
+                      actual y el crecimiento pasado de Internet.
                      </p>
                      <button class="btn btn_contact">
                          Contactar
@@ -138,7 +137,7 @@
             </div>
         </article>
           <article class="job row">
-            <div class="bg_image col-md-8">
+            <div class="bg_image col-md-8"  data-aos="fade-right">
                 <div class="text der">
                       <h2>ALIEN COVENANT</h2>
                       <p>
@@ -151,24 +150,20 @@
                         </button>
                 </div>
              </div>
-            <div class="phrase der col-md-4">
+            <div class="phrase der col-md-4"  data-aos="fade-left">
              <p>
-                "Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                  sed diam nonumy eirmod tempor invidunt ut 
-                  labore et dolore "
+                "Creamos los diseños más unicos e innovadores basados en las ultimas tendencias en cuanto a diseño web"
              </p>
             </div>
           
         </article>
         <article class="job row">
-            <div class="phrase col-md-4" class="">
+            <div class="phrase col-md-4"  data-aos="fade-right">
            <p>
-            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-            sed diam nonumy eirmod tempor invidunt ut 
-            labore et dolore "
+            "Nos adecuamos a cualquier tipo de proyecto web desde proyectos empresariales hasta personales, o de cualquier indole"
            </p>
             </div>
-            <div class="bg_image col-md-8">
+            <div class="bg_image col-md-8"  data-aos="fade-left">
                <div class="text">
                      <h2>Coffe startup</h2>
                      <p>
@@ -202,31 +197,25 @@
 
           </div>
            <section class="resenias">
-              <h2 class="titulo">¿QUE DICEN NuESTROS CLIENTES  SOBRE NOSOTROS?</h2>
+              <h2 class="titulo" data-aos="zoom-in">¿QUE DICEN NuESTROS CLIENTES  SOBRE NOSOTROS?</h2>
               <div class="row">
-                   <div class="col-sm-12 col-md-4">
+                   <div class="col-sm-12 col-md-4" data-aos="fade-up-right">
                        <img src="asssets/img/resenias/alta_sierra.png" alt="">
                    </div>
-                   <div class="col-sm-12 col-md-8">
-                       <h2>KPF corporation</h2>
+                   <div class="col-sm-12 col-md-8" data-aos="fade-up-left">
+                       <h2>Empresa Alta Sierra</h2>
                        <p>
-                        "Trabajamos con InnovaDesign desde hace un año 
-                        para la formación de nuestra plataforma.
-                        Desde entonces estamos muy satisfechos
-                        con los servicios proporcionados por
-                        InnovaDesign, quien, desde el principio, 
-                        ha demostrado una excelente calidad de
-                        servicio y ha sabido desarrollar su
-                        plataforma en función de nuestras necesidades.
+                        "Estamos muy agradecidos a  la empresa Innovadesign por su trabajo impecable 
+                        al sugerirnos innovadoras para el diseño publicitario de la agencia de viajes y Turismo"
                     </p>
                     <hr>
                    </div>
               </div>
               <div class="row">
-                   <div class="col-sm-12 col-md-4">
+                   <div class="col-sm-12 col-md-4" data-aos="fade-up-right">
                        <img src="asssets/img/resenias/kpf.png" alt="">
                    </div>
-                   <div class="col-sm-12 col-md-8">
+                   <div class="col-sm-12 col-md-8" data-aos="fade-up-left">
                        <h2>KPF corporation</h2>
                        <p>
                         "Trabajamos con InnovaDesign desde hace un año 
@@ -245,11 +234,11 @@
         </div>
         <div class="sen_resenia">
              <h2>Ayudanos a mejorar</h2>
-             <textarea class="w-100" placeholder="deja una reseña">
+             <textarea class="w-100" id="textResenia" placeholder="deja una reseña">
         
              </textarea>
            <div class="w-100 ">
-            <button class="btn">
+            <button class="btn" id="enviar">
                 enviar
             </button>
            </div>
@@ -299,7 +288,7 @@
          <!--register modal-->
    <div id="animatedModal" class="modal">
    
-      <div class="container conte">
+    <div class="container conte"> 
         <div class="caja1">
           <div class="titulo">
               <h1>InnovaDesign</h1>
@@ -340,7 +329,7 @@
           <div class="registrar" id="register">
               <input type="submit" value="REGISTRARSE">
           </div>
-          <a class="log" href="login.html">Ya tengo cuenta</a>
+          <a class="log" href="loguin.html" >Ya tengo cuenta</a>
        
               <li>
                   <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -352,7 +341,8 @@
        <div class="alerta " id="alerta">
             <small></small>
        </div>
-      </div>
+      </div> 
+
 
     <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID  class="close-animatedModal" -->
     <div class="close-animatedModal"> 
@@ -361,7 +351,8 @@
 </div>
 <!-- -----------------------// end modals  //---------------------- -->
    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="libs/swertalert2/sweetalert2.min.js"></script>
+   <script src="libs/aos/aos.js"></script>
+   <script src="libs/swertalert2/sweetalert2.min.js"></script>
    <script src="libs/modal/animatedModal.min.js"></script>
    <script src="js/portafolio.js"></script>
   <!-- -----------------------// end footer  //---------------------- -->
