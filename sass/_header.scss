@@ -34,6 +34,9 @@
                 background: #aaa;
                 height: 2px;
                }
+               &.active:after{
+                  width: 100%;
+               }
                &:hover:after{
                 width: 100%;
                 // @include  hover_state_menu(normal);
@@ -71,6 +74,17 @@ header{
      &.open{
       visibility: visible ;
       transform: translateX(0);
+     }
+     .user{
+        display: flex;
+       justify-content:space-between; 
+      flex-direction: row;
+       
+       color: white;
+       margin-top: 1.002rem;
+       margin-left: 0rem;
+       cursor: pointer;
+      //  border: 2px solid whitesmoke;
      }
   }
   .menu-btn{

@@ -1,24 +1,25 @@
 header{
     height: auto;
+
+ 
+}
+.icons{
+  // color: black;
+    &.open{
+      // bottom: -10rem;
+      left: 39%;
+      span{
+        display: none;
+      }
+    }
+  }
+.menu .title{
+  &.open{
+    display: none;
+    //  transform: translateY(10rem) translateX(11rem);
+  }
 }
 
-// .icons{
-//     @include  transition-ease;
-//    position:  absolute;
-//      top: calc(90vh - 150px);
-//      left: 5%;
-//     flex-direction: row;
-//     width: 15rem;
-//     &.open{
-//      top: 2rem;
-//       left:35%;
-//       span{
-//         display: none;
-//       }
-//     }
-//   }
-
-  
   .contForm{
     // border: 2px solid white;
     width: 75vw;

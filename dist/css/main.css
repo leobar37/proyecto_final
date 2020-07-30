@@ -4,10 +4,6 @@ a {
   cursor: pointer;
 }
 
-h6 {
-  font-size: font_size(small);
-}
-
 /*---------------------------mediqueriest --------------------------*/
 /*---------------------------end mediqueries ----------------------*/
 img {
@@ -105,6 +101,9 @@ header .menu ul a::after {
   background: #aaa;
   height: 2px;
 }
+header .menu ul a.active:after {
+  width: 100%;
+}
 header .menu ul a:hover:after {
   width: 100%;
 }
@@ -141,6 +140,15 @@ header {
 header .menu.open {
   visibility: visible;
   transform: translateX(0);
+}
+header .menu .user {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  color: white;
+  margin-top: 1.002rem;
+  margin-left: 0rem;
+  cursor: pointer;
 }
 header .menu-btn {
   visibility: hidden;
@@ -981,6 +989,12 @@ footer .columns {
 .sobre_nosotros .galeria .card .content .icons a:hover {
   transform: scale(1.1);
 }
+@media screen and (max-width: 768px) {
+  .sobre_nosotros .galeria .card .content .icons {
+    position: absolute;
+    top: 315px !important;
+  }
+}
 @media screen and (max-width: 500px) {
   .sobre_nosotros .galeria .card .content .icons {
     position: absolute;
@@ -1026,7 +1040,7 @@ footer .columns {
   margin-left: 6%;
 }
 .folio header .icons.open {
-  top: 10rem !important;
+  top: 10rem;
   left: 40%;
 }
 .folio header .icons.open span {
@@ -1249,6 +1263,15 @@ footer .columns {
 }
 .contacto header {
   height: auto;
+}
+.contacto .icons.open {
+  left: 39%;
+}
+.contacto .icons.open span {
+  display: none;
+}
+.contacto .menu .title.open {
+  display: none;
 }
 .contacto .contForm {
   width: 75vw;

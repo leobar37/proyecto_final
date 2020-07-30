@@ -1,0 +1,200 @@
+$color-secondary : #424242;
+$color-white : #FFFFFF;
+$color-primary : #85AEFF;
+
+$font-lato: 'Lato', sans-serif;
+$font-sans: 'Open Sans', sans-serif;
+$font-roboto: 'Roboto', sans-serif;
+$shadow-card :  7px 19px 33px -9px rgba(0,0,0,0.44);;
+$space_items : 10px;
+
+.modal{
+    @import "checkbox";
+    .alerta{
+        width: 35vw;
+        padding: 1.5rem 0.2rem;
+        position: fixed;
+        bottom: 13rem;
+        height: 4.5rem;
+         text-align: center;
+        right: 35rem;
+        top: -10rem;
+        // transform: translateY(-40rem);
+        background: rgba($color: #9c928d, $alpha: 1);
+        .alert{
+            padding: 1.5rem 0.2rem;
+            font-size: 1rem;
+            color:  white;
+        }
+        &.open{
+            top: 0.2rem;
+        //  transform: translateY(40rem) ;
+        } 
+    }
+    .alert{
+        color: #424242;
+        padding: 1rem 0.2rem;
+    }
+    
+ul{
+    text-decoration: none;               
+  list-style: none;
+ }
+ li{
+     list-style: none;
+ 
+ }
+ 
+ a{
+     text-decoration: none;
+      color: white;
+ }
+    .conte{
+        font-size: 14px;
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        .caja1{
+            padding:  0 0.8rem;
+        //    padding:  1rem  0.8rem;
+            color:  #ffffff;
+            background-color:  #444444;
+            // border: 2px solid red;
+            width: 50%;
+            height: 80%;
+            .titulo{
+                h1{
+                    text-align: center;
+                    font-family: $font-lato;
+                    margin-bottom: 1.5rem;
+                }          
+                h3{
+                     font-family: $font-sans;
+                     font-weight: 300;
+                     font-size: 1rem;
+                 }
+            }
+            h4{
+                margin: 2.5rem 0;
+                text-transform: capitalize;
+                font-family: $font-roboto;
+                font-weight: 500;
+            }
+            .texto1{
+               ul{
+                   width: 1000%;
+                //  border: 2px solid white;
+                   li{
+                    //    width: auto !important;
+                      margin:  1rem 0;
+                      font-family: $font-sans;
+                      font-weight: 300;
+                   }
+               }
+            }
+            .texto2{
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                 flex-direction: column;
+              a{
+                //   width: 100%;
+                margin: 1rem 1rem;
+                border: 2px solid white;
+                 width:  35%;
+                padding:  1rem 0;
+                padding: 0.5rem;
+                i{
+                      font-size: 1.5rem;
+                    padding: 0.5rem 1rem;
+                }
+                &:hover{
+                    transform: scale(1.1);
+                }
+              }
+            }
+        }
+        .caja2{
+            //  border: 2px solid black;
+             width: 65%;
+             height: 80%;
+             .titulo{
+                 h2{
+                     text-align: center;
+                 }
+             }
+             .texto1{
+                 text-align: center;
+                 form{
+                     input{
+                         border: none;
+                          outline: none;
+                          border-bottom: 1px solid black;
+                         width: 80%;
+                         padding: 0.5rem 0.2rem;
+                         margin: 0.5rem 0;
+                     }
+                 }
+               .terminos{
+                   width: 80%;
+                   margin: 1rem 0;
+                   margin-left: 4rem;
+                   text-align: left;
+               }
+             }
+             .registrar input{
+                margin-left: 4rem;
+                padding: 0.8rem 1rem;
+                border: none;
+                text-transform: uppercase;
+                outline: none;  
+                cursor: pointer;
+                border: 2px solid  $color-secondary;
+                background: transparent; 
+             }
+            
+                 a{
+                     position: relative;
+                     margin: 1rem 0;
+                     color: black;
+                     width: 100%;
+                     right: -28rem;
+                     font-size: 1.5rem;
+                     text-align: right;        
+                     &.log{
+                        //  border-bottom: 1px solid black;
+                         &:hover{
+                            border-bottom: 2px solid black;
+
+                         }
+                    }
+                    }
+                li{
+                    margin: 1rem 0;
+                    a i{
+                        padding: 0.5rem 0.5rem;
+                    }
+                }
+             
+
+        }
+    }
+    .close-animatedModal{
+        position: fixed;
+        z-index: 5;
+        top: 5rem;
+        right: 15rem;
+        cursor: pointer;
+        i{
+            font-size: 1.5rem;
+        }
+
+    }
+}
+
+
+  /*---------------------------alertat --------------------------*/
+
+/*---------------------------end alerta ----------------------*/ 

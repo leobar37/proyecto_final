@@ -47,11 +47,12 @@
            a:hover{
              transform: scale(1.1);
            }
-            
+           @include media-md{
+            position: absolute;
+           top: 315px !important;
+        }
            @include media-sm{
                position: absolute;
-            //    transform: translateX(-20rem);
-            //   border: 2px solid white;
               top: 300px !important;
            }
 

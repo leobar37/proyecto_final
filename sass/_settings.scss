@@ -20,9 +20,7 @@ a{
     text-decoration: none;
     cursor: pointer;
 }
-h6{
- font-size: font_size(small);
-}
+
 @function font_size( $font){
     @return map-get($map: $fonts-size , $key: $font);
 }

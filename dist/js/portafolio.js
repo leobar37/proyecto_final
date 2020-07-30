@@ -1,3 +1,12 @@
+
+$(document).ready(function () {
+    $("#demo01").animatedModal({
+        color : "#FFFFFF",
+        animatedIn: "lightSpeedIn",
+        animatedOut: "bounceOutDown"
+    });
+    
+});
 let  images  = [
 "../asssets/img/projects/future.png",
 "../asssets/img/projects/alien.png",
@@ -29,4 +38,46 @@ menuBtn.addEventListener('click' ,()=>{
    itemsNav.forEach(item => item.classList.toggle('open'));
 
 
+});
+const row = document.querySelector('.row__down a');
+const header = document.querySelector('header');
+row.addEventListener('click' , ()=>{
+  let top = header.getBoundingClientRect().height;
+
+   window.scroll(
+    { top : top + 200}
+   );
+})
+
+
+
+const sumbmit = document.getElementById('register');
+const alerta = document.getElementById('alerta');
+const noneText =  document.querySelector('#alerta small');
+
+noneText.classList.add('alert');
+sumbmit.addEventListener('click', (e)=>{
+    e.preventDefault();
+
+let info =  document.getElementById('info');
+let celular  = document.getElementById('celular');
+let correo =  document.getElementById('correo');
+let pass = document.getElementById('pass');
+let arr = [pass , correo , celular , info];
+let val  = arr.find(item => item.value.trim().length ==0);
+
+if(val){
+    // noneText.style = 'background: rgb(131, 33, 33)';
+    noneText.textContent = "se han encontrado campos vacios";
+}else{
+    noneText.textContent = "registrado correctamente";
+     localStorage.setItem('name' , info);
+    arr.forEach(item =>  item.value = "");
+}
+
+alerta.classList.toggle('open');
+setTimeout(()=>{
+    alerta.classList.toggle('open');
+
+}, 1000)
 });
